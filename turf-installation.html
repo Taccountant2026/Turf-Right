@@ -1,0 +1,292 @@
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/turf-installation.html b/turf-installation.html
+new file mode 100644
+index 0000000000000000000000000000000000000000..50bee48eedb5b3801137c177a9a779ffc87a5bfd
+--- /dev/null
++++ b/turf-installation.html
+@@ -0,0 +1,282 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++  <meta charset="UTF-8">
++  <meta name="viewport" content="width=device-width, initial-scale=1.0">
++  <title>Spring-Ready Turf Installation | Book Your Slot</title>
++  <meta name="description" content="Premium artificial turf installation with spring availability. Book a measurement, choose packages, and secure your spot for the upcoming season.">
++  <link rel="stylesheet" href="style.css">
++  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
++</head>
++<body class="turf-page">
++  <header class="turf-header">
++    <div class="container turf-header-content">
++      <div class="turf-brand">
++        <div class="brand-icon">🌱</div>
++        <div>
++          <p class="brand-name">Evergreen Turf Installers</p>
++          <p class="brand-tagline">Licensed • Insured • Spring availability</p>
++        </div>
++      </div>
++      <div class="turf-header-actions">
++        <a href="tel:+18005551234" class="turf-header-link">Call (800) 555-1234</a>
++        <a href="#quote" class="btn btn-success">Reserve Spring Install</a>
++      </div>
++    </div>
++  </header>
++
++  <main>
++    <section class="turf-hero">
++      <div class="container turf-hero-grid">
++        <div class="turf-hero-text">
++          <div class="turf-badge">Now booking spring installations</div>
++          <h1>Lush, low-maintenance turf installed before the season starts</h1>
++          <p>From clean removal to laser-level prep, drainage, and premium turf, we handle every step so your yard is party-ready for spring. Tell us your timeline and we will secure your spot.</p>
++          <ul class="turf-hero-list">
++            <li>Guaranteed spring scheduling with written timeline</li>
++            <li>Pet-friendly & kid-safe infill options</li>
++            <li>Financing guidance and HOA-ready documentation</li>
++          </ul>
++          <div class="hero-cta">
++            <a href="#quote" class="btn btn-primary">Book a measurement</a>
++            <a href="#packages" class="btn btn-secondary">View packages</a>
++          </div>
++          <div class="turf-hero-meta">
++            <span>⭐ 4.9/5 local reviews</span>
++            <span>🔒 Licensed & insured crew</span>
++            <span>📍 Serving metro & surrounding suburbs</span>
++          </div>
++        </div>
++        <div class="turf-hero-card">
++          <div class="turf-hero-card-header">
++            <p>Spring install calendar</p>
++            <strong>Spots filling fast</strong>
++          </div>
++          <div class="calendar-grid">
++            <div class="calendar-slot available">
++              <p>March</p>
++              <span>8 installs left</span>
++            </div>
++            <div class="calendar-slot available">
++              <p>April</p>
++              <span>12 installs left</span>
++            </div>
++            <div class="calendar-slot limited">
++              <p>May</p>
++              <span>Waitlist opening</span>
++            </div>
++          </div>
++          <div class="turf-hero-note">
++            Book now and we’ll lock in a site visit within 72 hours.
++          </div>
++          <a href="#quote" class="btn btn-success full-width">Reserve my slot</a>
++        </div>
++      </div>
++    </section>
++
++    <section class="section">
++      <div class="container">
++        <div class="section-header">
++          <h2 class="section-title">Complete turf installation, end-to-end</h2>
++          <p class="section-subtitle">Transparent pricing, clean crews, and surfaces designed to drain, cool, and last.</p>
++        </div>
++        <div class="turf-grid">
++          <article class="turf-card">
++            <div class="turf-card-icon">🏠</div>
++            <h3>Front yards & curb appeal</h3>
++            <p>We remove old sod, correct grading, and install premium turf with crisp edging that boosts your home’s first impression.</p>
++            <ul class="turf-card-list">
++              <li>Laser-level base & compaction</li>
++              <li>Cool-play, UV-resistant blades</li>
++              <li>Warranty & care walkthrough</li>
++            </ul>
++          </article>
++          <article class="turf-card">
++            <div class="turf-card-icon">🐾</div>
++            <h3>Pet-friendly backyards</h3>
++            <p>Antimicrobial infill, secure seams, and odor management built for high-traffic furry friends.</p>
++            <ul class="turf-card-list">
++              <li>Perimeter anchoring for diggers</li>
++              <li>Drainage grid for quick dry-out</li>
++              <li>Rinse & deodorize support plan</li>
++            </ul>
++          </article>
++          <article class="turf-card">
++            <div class="turf-card-icon">⛳</div>
++            <h3>Putting greens</h3>
++            <p>Custom breaks, fringe, and cup placements tailored to your short game with pro-grade turf speeds.</p>
++            <ul class="turf-card-list">
++              <li>Contour design & stencil layout</li>
++              <li>Top-dressed for true roll</li>
++              <li>Lighting & hardscape coordination</li>
++            </ul>
++          </article>
++        </div>
++      </div>
++    </section>
++
++    <section class="section turf-highlights" id="packages">
++      <div class="container">
++        <div class="section-header">
++          <h2 class="section-title">Spring packages & pricing guidance</h2>
++          <p class="section-subtitle">Tell us your square footage and we’ll recommend the right base, infill, and turf weight for your property.</p>
++        </div>
++        <div class="turf-package-grid">
++          <div class="turf-package">
++            <div class="package-label">Fastest to schedule</div>
++            <h3>Weekday Install</h3>
++            <p class="package-price">From $12/ft²</p>
++            <ul>
++              <li>Two-visit plan: measure + install</li>
++              <li>Premium turf with heat-reflective infill</li>
++              <li>Debris haul-away & final grooming</li>
++            </ul>
++            <a href="#quote" class="btn btn-primary full-width">Check weekday dates</a>
++          </div>
++          <div class="turf-package">
++            <div class="package-label secondary">Family & pets</div>
++            <h3>Everyday Comfort</h3>
++            <p class="package-price">From $14/ft²</p>
++            <ul>
++              <li>Extra cushioning + antimicrobial infill</li>
++              <li>Drainage layer for quick dry play</li>
++              <li>10-year turf manufacturer warranty</li>
++            </ul>
++            <a href="#quote" class="btn btn-success full-width">Save a weekend slot</a>
++          </div>
++          <div class="turf-package">
++            <div class="package-label accent">Custom builds</div>
++            <h3>Greens & Courts</h3>
++            <p class="package-price">Custom proposal</p>
++            <ul>
++              <li>Putting greens, bocce, and multi-sport</li>
++              <li>Curbs, benders, pavers, and lighting</li>
++              <li>On-site design with 3D layout options</li>
++            </ul>
++            <a href="#quote" class="btn btn-outline full-width">Book a design consult</a>
++          </div>
++        </div>
++      </div>
++    </section>
++
++    <section class="section turf-steps">
++      <div class="container">
++        <div class="section-header">
++          <h2 class="section-title">How we keep your install on schedule</h2>
++          <p class="section-subtitle">From first call to final groom, you’ll know what happens next and when your yard will be spring-ready.</p>
++        </div>
++        <div class="steps-grid">
++          <div class="step-card">
++            <div class="step-number">01</div>
++            <h3>Measure & design</h3>
++            <p>We map irrigation, slopes, and access points, then share a clear diagram with materials and drainage callouts.</p>
++          </div>
++          <div class="step-card">
++            <div class="step-number">02</div>
++            <h3>Base prep</h3>
++            <p>Old sod and debris removed, base compacted, and seams planned. We protect driveways and clean daily.</p>
++          </div>
++          <div class="step-card">
++            <div class="step-number">03</div>
++            <h3>Install & finish</h3>
++            <p>Seams are hidden, infill is evenly brushed, and you receive a maintenance guide plus warranty paperwork.</p>
++          </div>
++        </div>
++      </div>
++    </section>
++
++    <section class="section turf-cta">
++      <div class="container turf-cta-content">
++        <div>
++          <div class="turf-badge">Service areas</div>
++          <h2>Metro, Northside, West Valley & Lake communities</h2>
++          <p>We’re local crews, background-checked and insured. We coordinate around HOA rules and city permitting so you can enjoy a hassle-free install.</p>
++          <div class="turf-cta-highlights">
++            <span>📅 72-hour site visits</span>
++            <span>🚚 Debris haul-away included</span>
++            <span>🧹 Post-install grooming</span>
++          </div>
++        </div>
++        <div class="turf-cta-card">
++          <p class="turf-cta-title">Ready for spring?</p>
++          <p class="turf-cta-text">Tell us your square footage and ideal date. We’ll confirm the first available slot within one business day.</p>
++          <a href="#quote" class="btn btn-success full-width">Get on the calendar</a>
++          <p class="turf-cta-note">No obligation until you approve the written proposal.</p>
++        </div>
++      </div>
++    </section>
++
++    <section class="section turf-form-section" id="quote">
++      <div class="container">
++        <div class="section-header">
++          <h2 class="section-title">Request your spring install</h2>
++          <p class="section-subtitle">Share a few details and we’ll schedule a site visit, confirm drainage needs, and lock in your installation window.</p>
++        </div>
++        <div class="turf-form-card">
++          <form class="turf-form">
++            <div class="form-row">
++              <label for="name">Full name</label>
++              <input type="text" id="name" name="name" placeholder="Alex Green" required>
++            </div>
++            <div class="form-row two-col">
++              <div>
++                <label for="email">Email</label>
++                <input type="email" id="email" name="email" placeholder="you@example.com" required>
++              </div>
++              <div>
++                <label for="phone">Phone</label>
++                <input type="tel" id="phone" name="phone" placeholder="(800) 555-1234" required>
++              </div>
++            </div>
++            <div class="form-row two-col">
++              <div>
++                <label for="address">Project address</label>
++                <input type="text" id="address" name="address" placeholder="123 Greenway Ave" required>
++              </div>
++              <div>
++                <label for="city">City</label>
++                <input type="text" id="city" name="city" placeholder="Metro City" required>
++              </div>
++            </div>
++            <div class="form-row two-col">
++              <div>
++                <label for="size">Approximate area (ft²)</label>
++                <input type="number" id="size" name="size" min="0" placeholder="1200" required>
++              </div>
++              <div>
++                <label for="timeline">Ideal install month</label>
++                <select id="timeline" name="timeline" required>
++                  <option value="">Select month</option>
++                  <option>March</option>
++                  <option>April</option>
++                  <option>May</option>
++                  <option>June</option>
++                  <option>Flexible</option>
++                </select>
++              </div>
++            </div>
++            <div class="form-row">
++              <label>What do you need?</label>
++              <div class="chip-grid">
++                <label class="chip"><input type="checkbox" name="services" value="front"> Front yard refresh</label>
++                <label class="chip"><input type="checkbox" name="services" value="back"> Pet-friendly backyard</label>
++                <label class="chip"><input type="checkbox" name="services" value="green"> Putting green</label>
++                <label class="chip"><input type="checkbox" name="services" value="sport"> Sport or play court</label>
++                <label class="chip"><input type="checkbox" name="services" value="other"> Other custom</label>
++              </div>
++            </div>
++            <div class="form-row">
++              <label for="notes">Notes for our crew</label>
++              <textarea id="notes" name="notes" rows="4" placeholder="Gates on the left side, dogs use the yard daily, would like a small putting cup near the patio."></textarea>
++            </div>
++            <div class="form-row form-footer">
++              <div class="form-footnote">We respond within one business day. Your information stays private.</div>
++              <button type="submit" class="btn btn-primary">Submit & hold my spot</button>
++            </div>
++          </form>
++        </div>
++      </div>
++    </section>
++  </main>
++</body>
++</html>
+ 
+EOF
+)
