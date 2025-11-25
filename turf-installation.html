@@ -1,292 +1,1302 @@
- (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
-diff --git a/turf-installation.html b/turf-installation.html
-new file mode 100644
-index 0000000000000000000000000000000000000000..50bee48eedb5b3801137c177a9a779ffc87a5bfd
---- /dev/null
-+++ b/turf-installation.html
-@@ -0,0 +1,282 @@
-+<!DOCTYPE html>
-+<html lang="en">
-+<head>
-+  <meta charset="UTF-8">
-+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-+  <title>Spring-Ready Turf Installation | Book Your Slot</title>
-+  <meta name="description" content="Premium artificial turf installation with spring availability. Book a measurement, choose packages, and secure your spot for the upcoming season.">
-+  <link rel="stylesheet" href="style.css">
-+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-+</head>
-+<body class="turf-page">
-+  <header class="turf-header">
-+    <div class="container turf-header-content">
-+      <div class="turf-brand">
-+        <div class="brand-icon">🌱</div>
-+        <div>
-+          <p class="brand-name">Evergreen Turf Installers</p>
-+          <p class="brand-tagline">Licensed • Insured • Spring availability</p>
-+        </div>
-+      </div>
-+      <div class="turf-header-actions">
-+        <a href="tel:+18005551234" class="turf-header-link">Call (800) 555-1234</a>
-+        <a href="#quote" class="btn btn-success">Reserve Spring Install</a>
-+      </div>
-+    </div>
-+  </header>
-+
-+  <main>
-+    <section class="turf-hero">
-+      <div class="container turf-hero-grid">
-+        <div class="turf-hero-text">
-+          <div class="turf-badge">Now booking spring installations</div>
-+          <h1>Lush, low-maintenance turf installed before the season starts</h1>
-+          <p>From clean removal to laser-level prep, drainage, and premium turf, we handle every step so your yard is party-ready for spring. Tell us your timeline and we will secure your spot.</p>
-+          <ul class="turf-hero-list">
-+            <li>Guaranteed spring scheduling with written timeline</li>
-+            <li>Pet-friendly & kid-safe infill options</li>
-+            <li>Financing guidance and HOA-ready documentation</li>
-+          </ul>
-+          <div class="hero-cta">
-+            <a href="#quote" class="btn btn-primary">Book a measurement</a>
-+            <a href="#packages" class="btn btn-secondary">View packages</a>
-+          </div>
-+          <div class="turf-hero-meta">
-+            <span>⭐ 4.9/5 local reviews</span>
-+            <span>🔒 Licensed & insured crew</span>
-+            <span>📍 Serving metro & surrounding suburbs</span>
-+          </div>
-+        </div>
-+        <div class="turf-hero-card">
-+          <div class="turf-hero-card-header">
-+            <p>Spring install calendar</p>
-+            <strong>Spots filling fast</strong>
-+          </div>
-+          <div class="calendar-grid">
-+            <div class="calendar-slot available">
-+              <p>March</p>
-+              <span>8 installs left</span>
-+            </div>
-+            <div class="calendar-slot available">
-+              <p>April</p>
-+              <span>12 installs left</span>
-+            </div>
-+            <div class="calendar-slot limited">
-+              <p>May</p>
-+              <span>Waitlist opening</span>
-+            </div>
-+          </div>
-+          <div class="turf-hero-note">
-+            Book now and we’ll lock in a site visit within 72 hours.
-+          </div>
-+          <a href="#quote" class="btn btn-success full-width">Reserve my slot</a>
-+        </div>
-+      </div>
-+    </section>
-+
-+    <section class="section">
-+      <div class="container">
-+        <div class="section-header">
-+          <h2 class="section-title">Complete turf installation, end-to-end</h2>
-+          <p class="section-subtitle">Transparent pricing, clean crews, and surfaces designed to drain, cool, and last.</p>
-+        </div>
-+        <div class="turf-grid">
-+          <article class="turf-card">
-+            <div class="turf-card-icon">🏠</div>
-+            <h3>Front yards & curb appeal</h3>
-+            <p>We remove old sod, correct grading, and install premium turf with crisp edging that boosts your home’s first impression.</p>
-+            <ul class="turf-card-list">
-+              <li>Laser-level base & compaction</li>
-+              <li>Cool-play, UV-resistant blades</li>
-+              <li>Warranty & care walkthrough</li>
-+            </ul>
-+          </article>
-+          <article class="turf-card">
-+            <div class="turf-card-icon">🐾</div>
-+            <h3>Pet-friendly backyards</h3>
-+            <p>Antimicrobial infill, secure seams, and odor management built for high-traffic furry friends.</p>
-+            <ul class="turf-card-list">
-+              <li>Perimeter anchoring for diggers</li>
-+              <li>Drainage grid for quick dry-out</li>
-+              <li>Rinse & deodorize support plan</li>
-+            </ul>
-+          </article>
-+          <article class="turf-card">
-+            <div class="turf-card-icon">⛳</div>
-+            <h3>Putting greens</h3>
-+            <p>Custom breaks, fringe, and cup placements tailored to your short game with pro-grade turf speeds.</p>
-+            <ul class="turf-card-list">
-+              <li>Contour design & stencil layout</li>
-+              <li>Top-dressed for true roll</li>
-+              <li>Lighting & hardscape coordination</li>
-+            </ul>
-+          </article>
-+        </div>
-+      </div>
-+    </section>
-+
-+    <section class="section turf-highlights" id="packages">
-+      <div class="container">
-+        <div class="section-header">
-+          <h2 class="section-title">Spring packages & pricing guidance</h2>
-+          <p class="section-subtitle">Tell us your square footage and we’ll recommend the right base, infill, and turf weight for your property.</p>
-+        </div>
-+        <div class="turf-package-grid">
-+          <div class="turf-package">
-+            <div class="package-label">Fastest to schedule</div>
-+            <h3>Weekday Install</h3>
-+            <p class="package-price">From $12/ft²</p>
-+            <ul>
-+              <li>Two-visit plan: measure + install</li>
-+              <li>Premium turf with heat-reflective infill</li>
-+              <li>Debris haul-away & final grooming</li>
-+            </ul>
-+            <a href="#quote" class="btn btn-primary full-width">Check weekday dates</a>
-+          </div>
-+          <div class="turf-package">
-+            <div class="package-label secondary">Family & pets</div>
-+            <h3>Everyday Comfort</h3>
-+            <p class="package-price">From $14/ft²</p>
-+            <ul>
-+              <li>Extra cushioning + antimicrobial infill</li>
-+              <li>Drainage layer for quick dry play</li>
-+              <li>10-year turf manufacturer warranty</li>
-+            </ul>
-+            <a href="#quote" class="btn btn-success full-width">Save a weekend slot</a>
-+          </div>
-+          <div class="turf-package">
-+            <div class="package-label accent">Custom builds</div>
-+            <h3>Greens & Courts</h3>
-+            <p class="package-price">Custom proposal</p>
-+            <ul>
-+              <li>Putting greens, bocce, and multi-sport</li>
-+              <li>Curbs, benders, pavers, and lighting</li>
-+              <li>On-site design with 3D layout options</li>
-+            </ul>
-+            <a href="#quote" class="btn btn-outline full-width">Book a design consult</a>
-+          </div>
-+        </div>
-+      </div>
-+    </section>
-+
-+    <section class="section turf-steps">
-+      <div class="container">
-+        <div class="section-header">
-+          <h2 class="section-title">How we keep your install on schedule</h2>
-+          <p class="section-subtitle">From first call to final groom, you’ll know what happens next and when your yard will be spring-ready.</p>
-+        </div>
-+        <div class="steps-grid">
-+          <div class="step-card">
-+            <div class="step-number">01</div>
-+            <h3>Measure & design</h3>
-+            <p>We map irrigation, slopes, and access points, then share a clear diagram with materials and drainage callouts.</p>
-+          </div>
-+          <div class="step-card">
-+            <div class="step-number">02</div>
-+            <h3>Base prep</h3>
-+            <p>Old sod and debris removed, base compacted, and seams planned. We protect driveways and clean daily.</p>
-+          </div>
-+          <div class="step-card">
-+            <div class="step-number">03</div>
-+            <h3>Install & finish</h3>
-+            <p>Seams are hidden, infill is evenly brushed, and you receive a maintenance guide plus warranty paperwork.</p>
-+          </div>
-+        </div>
-+      </div>
-+    </section>
-+
-+    <section class="section turf-cta">
-+      <div class="container turf-cta-content">
-+        <div>
-+          <div class="turf-badge">Service areas</div>
-+          <h2>Metro, Northside, West Valley & Lake communities</h2>
-+          <p>We’re local crews, background-checked and insured. We coordinate around HOA rules and city permitting so you can enjoy a hassle-free install.</p>
-+          <div class="turf-cta-highlights">
-+            <span>📅 72-hour site visits</span>
-+            <span>🚚 Debris haul-away included</span>
-+            <span>🧹 Post-install grooming</span>
-+          </div>
-+        </div>
-+        <div class="turf-cta-card">
-+          <p class="turf-cta-title">Ready for spring?</p>
-+          <p class="turf-cta-text">Tell us your square footage and ideal date. We’ll confirm the first available slot within one business day.</p>
-+          <a href="#quote" class="btn btn-success full-width">Get on the calendar</a>
-+          <p class="turf-cta-note">No obligation until you approve the written proposal.</p>
-+        </div>
-+      </div>
-+    </section>
-+
-+    <section class="section turf-form-section" id="quote">
-+      <div class="container">
-+        <div class="section-header">
-+          <h2 class="section-title">Request your spring install</h2>
-+          <p class="section-subtitle">Share a few details and we’ll schedule a site visit, confirm drainage needs, and lock in your installation window.</p>
-+        </div>
-+        <div class="turf-form-card">
-+          <form class="turf-form">
-+            <div class="form-row">
-+              <label for="name">Full name</label>
-+              <input type="text" id="name" name="name" placeholder="Alex Green" required>
-+            </div>
-+            <div class="form-row two-col">
-+              <div>
-+                <label for="email">Email</label>
-+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
-+              </div>
-+              <div>
-+                <label for="phone">Phone</label>
-+                <input type="tel" id="phone" name="phone" placeholder="(800) 555-1234" required>
-+              </div>
-+            </div>
-+            <div class="form-row two-col">
-+              <div>
-+                <label for="address">Project address</label>
-+                <input type="text" id="address" name="address" placeholder="123 Greenway Ave" required>
-+              </div>
-+              <div>
-+                <label for="city">City</label>
-+                <input type="text" id="city" name="city" placeholder="Metro City" required>
-+              </div>
-+            </div>
-+            <div class="form-row two-col">
-+              <div>
-+                <label for="size">Approximate area (ft²)</label>
-+                <input type="number" id="size" name="size" min="0" placeholder="1200" required>
-+              </div>
-+              <div>
-+                <label for="timeline">Ideal install month</label>
-+                <select id="timeline" name="timeline" required>
-+                  <option value="">Select month</option>
-+                  <option>March</option>
-+                  <option>April</option>
-+                  <option>May</option>
-+                  <option>June</option>
-+                  <option>Flexible</option>
-+                </select>
-+              </div>
-+            </div>
-+            <div class="form-row">
-+              <label>What do you need?</label>
-+              <div class="chip-grid">
-+                <label class="chip"><input type="checkbox" name="services" value="front"> Front yard refresh</label>
-+                <label class="chip"><input type="checkbox" name="services" value="back"> Pet-friendly backyard</label>
-+                <label class="chip"><input type="checkbox" name="services" value="green"> Putting green</label>
-+                <label class="chip"><input type="checkbox" name="services" value="sport"> Sport or play court</label>
-+                <label class="chip"><input type="checkbox" name="services" value="other"> Other custom</label>
-+              </div>
-+            </div>
-+            <div class="form-row">
-+              <label for="notes">Notes for our crew</label>
-+              <textarea id="notes" name="notes" rows="4" placeholder="Gates on the left side, dogs use the yard daily, would like a small putting cup near the patio."></textarea>
-+            </div>
-+            <div class="form-row form-footer">
-+              <div class="form-footnote">We respond within one business day. Your information stays private.</div>
-+              <button type="submit" class="btn btn-primary">Submit & hold my spot</button>
-+            </div>
-+          </form>
-+        </div>
-+      </div>
-+    </section>
-+  </main>
-+</body>
-+</html>
- 
-EOF
-)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TurfRight — Professional Lawn & Turf Installation</title>
+  <meta name="description" content="TurfRight provides professional lawn and turf installation, replacement and repairs. Fixed-price packages, free quotes, and a limited-time Spring Refresh promotion." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root{
+      --bg:#0b1b12;
+      --accent:#2ecc71;
+      --accent-dark:#239853;
+      --accent-soft:#e3f7eb;
+      --text:#f7f9f8;
+      --muted:#c5d5cb;
+      --card:#11251a;
+      --border:#1f3a29;
+      --danger:#e67e22;
+    }
+
+    *{box-sizing:border-box;}
+
+    html,body{
+      margin:0;
+      padding:0;
+      font-family:"Inter",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      scroll-behavior:smooth;
+    }
+
+    a{color:inherit;text-decoration:none;}
+    img{max-width:100%;display:block;}
+
+    .container{
+      width:100%;
+      max-width:1120px;
+      margin:0 auto;
+      padding:0 1.5rem;
+    }
+
+    /* HEADER */
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      backdrop-filter:blur(14px);
+      background:linear-gradient(to bottom,rgba(9,17,12,0.95),rgba(9,17,12,0.7),transparent);
+      border-bottom:1px solid rgba(45,76,56,0.7);
+    }
+
+    .top-bar{
+      background:linear-gradient(90deg,var(--accent-dark),#27ae60,#1abc9c);
+      font-size:0.88rem;
+      color:#052010;
+    }
+
+    .top-bar-inner{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:1rem;
+      padding:0.4rem 1.5rem;
+    }
+
+    .top-bar-highlight{
+      font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:0.06em;
+      display:flex;
+      align-items:center;
+      gap:0.5rem;
+    }
+
+    .top-bar-highlight span.badge{
+      background:#052010;
+      color:var(--accent-soft);
+      padding:0.12rem 0.5rem;
+      border-radius:999px;
+      font-size:0.7rem;
+    }
+
+    .top-bar-offer{
+      font-weight:500;
+    }
+
+    .top-bar-offer strong{
+      font-weight:800;
+      color:#052010;
+    }
+
+    .top-bar-note{
+      display:none;
+      font-weight:500;
+    }
+
+    @media(min-width:800px){
+      .top-bar-note{display:block;}
+    }
+
+    .nav-row{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:0.9rem 1.5rem 0.8rem;
+      gap:1.5rem;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:0.7rem;
+    }
+
+    .brand-mark{
+      width:36px;
+      height:36px;
+      border-radius:12px;
+      background:radial-gradient(circle at 20% 20%,#7bed9f 0, #2ecc71 35%, #145a32 80%);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:800;
+      font-size:1.1rem;
+      box-shadow:0 0 18px rgba(46,204,113,0.55);
+    }
+
+    .brand-text-main{
+      font-weight:800;
+      font-size:1.15rem;
+      letter-spacing:0.08em;
+      text-transform:uppercase;
+    }
+
+    .brand-text-sub{
+      font-size:0.78rem;
+      text-transform:uppercase;
+      letter-spacing:0.1em;
+      color:var(--muted);
+    }
+
+    nav ul{
+      display:flex;
+      flex-wrap:wrap;
+      gap:0.75rem;
+      list-style:none;
+      padding:0;
+      margin:0;
+      font-size:0.9rem;
+    }
+
+    nav a{
+      padding:0.3rem 0.6rem;
+      border-radius:999px;
+      color:var(--muted);
+      transition:background 0.2s, color 0.2s, transform 0.1s;
+    }
+
+    nav a:hover{
+      background:rgba(46,204,113,0.12);
+      color:var(--text);
+      transform:translateY(-1px);
+    }
+
+    nav a.active{
+      background:var(--accent);
+      color:#052010;
+      font-weight:600;
+    }
+
+    .nav-cta{
+      display:flex;
+      align-items:center;
+      gap:0.5rem;
+      font-size:0.87rem;
+    }
+
+    .nav-cta .pill{
+      border-radius:999px;
+      border:1px solid rgba(46,204,113,0.7);
+      padding:0.25rem 0.75rem;
+      color:var(--accent-soft);
+      background:rgba(6,16,11,0.95);
+    }
+
+    .nav-cta strong{
+      color:var(--accent);
+      font-weight:700;
+      font-size:1rem;
+    }
+
+    @media(max-width:830px){
+      .nav-row{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+      nav ul{order:3;}
+      .nav-cta{order:2;align-self:flex-end;}
+    }
+
+    /* HERO */
+
+    .hero{
+      padding:3.5rem 0 3rem;
+      background:
+        radial-gradient(circle at top left,rgba(46,204,113,0.22),transparent 55%),
+        radial-gradient(circle at bottom right,rgba(39,174,96,0.25),transparent 55%);
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);
+      gap:2.5rem;
+      align-items:center;
+    }
+
+    @media(max-width:900px){
+      .hero-grid{
+        grid-template-columns:1fr;
+      }
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:0.5rem;
+      padding:0.2rem 0.65rem;
+      border-radius:999px;
+      background:rgba(4,16,9,0.92);
+      border:1px solid rgba(46,204,113,0.6);
+      font-size:0.78rem;
+      text-transform:uppercase;
+      letter-spacing:0.12em;
+      color:var(--accent-soft);
+      margin-bottom:1.1rem;
+    }
+
+    .eyebrow span.tag{
+      background:var(--accent);
+      color:#052010;
+      padding:0.1rem 0.55rem;
+      border-radius:999px;
+      font-weight:700;
+    }
+
+    .hero h1{
+      font-size:2.45rem;
+      line-height:1.1;
+      margin:0 0 0.75rem;
+      letter-spacing:0.02em;
+    }
+
+    @media(min-width:900px){
+      .hero h1{font-size:2.9rem;}
+    }
+
+    .hero h1 span.highlight{
+      color:var(--accent);
+    }
+
+    .hero-lead{
+      font-size:1rem;
+      color:var(--muted);
+      max-width:34rem;
+      line-height:1.6;
+      margin-bottom:1.3rem;
+    }
+
+    .hero-lead strong{
+      color:var(--accent-soft);
+      font-weight:600;
+    }
+
+    .hero-pills{
+      display:flex;
+      flex-wrap:wrap;
+      gap:0.5rem;
+      font-size:0.78rem;
+      color:var(--muted);
+      margin-bottom:1.4rem;
+    }
+
+    .hero-pills span{
+      padding:0.16rem 0.55rem;
+      border-radius:999px;
+      background:rgba(6,18,11,0.96);
+      border:1px solid rgba(45,76,56,0.9);
+    }
+
+    .hero-cta-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:0.9rem;
+      align-items:center;
+      margin-bottom:1.2rem;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:999px;
+      padding:0.7rem 1.4rem;
+      font-size:0.92rem;
+      font-weight:600;
+      border:none;
+      cursor:pointer;
+      transition:transform 0.12s, box-shadow 0.12s, background 0.12s, color 0.12s;
+      white-space:nowrap;
+    }
+
+    .btn-primary{
+      background:linear-gradient(135deg,var(--accent),var(--accent-dark));
+      color:#052010;
+      box-shadow:0 12px 32px rgba(46,204,113,0.38);
+    }
+
+    .btn-primary:hover{
+      transform:translateY(-1px);
+      box-shadow:0 18px 40px rgba(46,204,113,0.45);
+    }
+
+    .btn-outline{
+      background:transparent;
+      color:var(--accent-soft);
+      border:1px solid rgba(46,204,113,0.7);
+    }
+
+    .btn-outline:hover{
+      background:rgba(5,21,11,0.96);
+      transform:translateY(-1px);
+    }
+
+    .hero-note{
+      font-size:0.82rem;
+      color:var(--muted);
+    }
+
+    .hero-note span{
+      color:var(--accent);
+      font-weight:600;
+    }
+
+    .hero-media{
+      position:relative;
+    }
+
+    .hero-card{
+      background:linear-gradient(145deg,#102218,#152c1f);
+      border-radius:22px;
+      padding:1.3rem 1.4rem 1.1rem;
+      border:1px solid rgba(46,204,113,0.35);
+      box-shadow:0 20px 45px rgba(4,15,9,0.85);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .hero-tagline{
+      font-size:0.8rem;
+      text-transform:uppercase;
+      letter-spacing:0.14em;
+      color:var(--muted);
+      margin-bottom:0.6rem;
+    }
+
+    .hero-lawn{
+      height:170px;
+      border-radius:18px;
+      background:
+        linear-gradient(180deg,rgba(12,31,18,0),rgba(12,31,18,0.9)),
+        url("https://images.unsplash.com/photo-1457296898342-cdd24585d095?auto=format&fit=crop&w=1000&q=80") center/cover no-repeat;
+      position:relative;
+      overflow:hidden;
+      margin-bottom:0.9rem;
+    }
+
+    .hero-lawn::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      box-shadow:inset 0 0 0 2px rgba(4,12,7,0.7);
+      border-radius:inherit;
+    }
+
+    .hero-lawn-label{
+      position:absolute;
+      left:0.9rem;
+      bottom:0.9rem;
+      background:rgba(4,15,8,0.85);
+      border-radius:999px;
+      padding:0.25rem 0.7rem;
+      font-size:0.75rem;
+      display:inline-flex;
+      align-items:center;
+      gap:0.4rem;
+      border:1px solid rgba(46,204,113,0.5);
+    }
+
+    .hero-lawn-label span.dot{
+      width:8px;
+      height:8px;
+      border-radius:50%;
+      background:var(--accent);
+      box-shadow:0 0 0 4px rgba(46,204,113,0.4);
+    }
+
+    .hero-metrics{
+      display:flex;
+      flex-wrap:wrap;
+      gap:0.8rem;
+      font-size:0.8rem;
+      color:var(--muted);
+      margin-bottom:0.6rem;
+    }
+
+    .hero-metrics > div{
+      padding:0.45rem 0.7rem;
+      border-radius:12px;
+      background:#08140d;
+      border:1px solid rgba(36,63,46,0.9);
+    }
+
+    .promo-pill{
+      position:absolute;
+      top:-0.3rem;
+      right:0.6rem;
+      background:linear-gradient(135deg,#f1c40f,#e67e22);
+      color:#1b1304;
+      padding:0.25rem 0.7rem;
+      border-radius:999px;
+      font-size:0.75rem;
+      font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:0.12em;
+      box-shadow:0 12px 30px rgba(230,126,34,0.5);
+    }
+
+    .promo-pill span{
+      display:inline-block;
+      margin-left:0.35rem;
+      padding:0.08rem 0.5rem;
+      border-radius:999px;
+      background:rgba(0,0,0,0.18);
+    }
+
+    /* SECTION GENERIC */
+
+    section{
+      padding:3rem 0;
+    }
+
+    .section-header{
+      text-align:center;
+      margin-bottom:2rem;
+    }
+
+    .section-kicker{
+      font-size:0.78rem;
+      text-transform:uppercase;
+      letter-spacing:0.12em;
+      color:var(--muted);
+      margin-bottom:0.4rem;
+    }
+
+    .section-title{
+      font-size:1.6rem;
+      margin:0 0 0.6rem;
+    }
+
+    .section-subtitle{
+      margin:0;
+      font-size:0.95rem;
+      color:var(--muted);
+      max-width:32rem;
+      margin-inline:auto;
+    }
+
+    .cards-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+      gap:1.4rem;
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:18px;
+      padding:1.2rem 1.25rem 1.15rem;
+      border:1px solid var(--border);
+      box-shadow:0 10px 25px rgba(3,10,6,0.85);
+    }
+
+    .card h3{
+      margin:0 0 0.4rem;
+      font-size:1.05rem;
+    }
+
+    .card p{
+      margin:0 0 0.6rem;
+      font-size:0.9rem;
+      color:var(--muted);
+    }
+
+    .chip-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:0.4rem;
+      margin-top:0.3rem;
+      font-size:0.78rem;
+    }
+
+    .chip{
+      padding:0.16rem 0.55rem;
+      border-radius:999px;
+      border:1px solid rgba(57,101,72,0.9);
+      color:var(--muted);
+    }
+
+    /* PACKAGES */
+
+    .package-price{
+      font-size:1.2rem;
+      font-weight:700;
+      margin:0.4rem 0 0.2rem;
+    }
+
+    .package-price span{
+      font-size:0.75rem;
+      font-weight:500;
+      color:var(--muted);
+    }
+
+    .package-list{
+      list-style:none;
+      padding:0;
+      margin:0.6rem 0 0.7rem;
+      font-size:0.86rem;
+      color:var(--muted);
+    }
+
+    .package-list li{
+      padding-left:1rem;
+      position:relative;
+      margin-bottom:0.25rem;
+    }
+
+    .package-list li::before{
+      content:"✓";
+      position:absolute;
+      left:0;
+      top:0;
+      color:var(--accent);
+      font-size:0.8rem;
+    }
+
+    .card.highlight{
+      border-color:var(--accent);
+      box-shadow:0 18px 40px rgba(46,204,113,0.32);
+      position:relative;
+    }
+
+    .card.highlight::before{
+      content:"Most popular";
+      position:absolute;
+      top:0.9rem;
+      right:1rem;
+      font-size:0.73rem;
+      text-transform:uppercase;
+      letter-spacing:0.11em;
+      padding:0.15rem 0.55rem;
+      border-radius:999px;
+      background:rgba(46,204,113,0.15);
+      border:1px solid rgba(46,204,113,0.7);
+      color:var(--accent-soft);
+    }
+
+    /* PROCESS */
+
+    .process-steps{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+      gap:1.2rem;
+      margin-top:1rem;
+    }
+
+    .step-badge{
+      width:24px;
+      height:24px;
+      border-radius:999px;
+      background:rgba(46,204,113,0.14);
+      border:1px solid rgba(46,204,113,0.7);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:0.8rem;
+      margin-bottom:0.35rem;
+    }
+
+    .step-title{
+      font-size:0.95rem;
+      font-weight:600;
+      margin-bottom:0.25rem;
+    }
+
+    .step-text{
+      font-size:0.85rem;
+      color:var(--muted);
+      margin:0;
+    }
+
+    /* GALLERY */
+
+    .gallery-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+      gap:1rem;
+    }
+
+    .gallery-item{
+      border-radius:18px;
+      overflow:hidden;
+      border:1px solid var(--border);
+      background:radial-gradient(circle at 20% 0%,rgba(46,204,113,0.3),transparent 55%), #081309;
+      min-height:140px;
+      position:relative;
+    }
+
+    .gallery-label{
+      position:absolute;
+      left:0.8rem;
+      bottom:0.7rem;
+      background:rgba(3,10,5,0.85);
+      padding:0.3rem 0.7rem;
+      border-radius:999px;
+      font-size:0.78rem;
+      border:1px solid rgba(60,108,76,0.9);
+      color:var(--muted);
+    }
+
+    /* FAQ */
+
+    .faq-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:1rem;
+      margin-top:0.7rem;
+    }
+
+    .faq-item h3{
+      font-size:0.98rem;
+      margin:0 0 0.3rem;
+    }
+
+    .faq-item p{
+      margin:0;
+      font-size:0.86rem;
+      color:var(--muted);
+    }
+
+    /* ORDER / CONTACT */
+
+    .order-section{
+      background:radial-gradient(circle at top,rgba(46,204,113,0.18),transparent 55%), #050c07;
+      border-top:1px solid rgba(46,204,113,0.35);
+    }
+
+    .order-layout{
+      display:grid;
+      grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);
+      gap:2rem;
+      align-items:flex-start;
+    }
+
+    @media(max-width:880px){
+      .order-layout{
+        grid-template-columns:1fr;
+      }
+    }
+
+    .order-highlight{
+      font-size:0.88rem;
+      color:var(--muted);
+      margin-bottom:1rem;
+    }
+
+    .order-highlight strong{
+      color:var(--accent);
+    }
+
+    .order-callout{
+      background:rgba(6,16,10,0.95);
+      border-radius:16px;
+      border:1px solid rgba(66,117,86,0.9);
+      padding:1rem 1.1rem;
+      margin-bottom:1.1rem;
+      font-size:0.9rem;
+      color:var(--muted);
+    }
+
+    .order-callout span.badge{
+      display:inline-block;
+      margin-bottom:0.25rem;
+      font-size:0.75rem;
+      text-transform:uppercase;
+      letter-spacing:0.11em;
+      color:var(--accent-soft);
+    }
+
+    .contact-meta{
+      font-size:0.86rem;
+      color:var(--muted);
+      margin-top:0.6rem;
+    }
+
+    .contact-meta div{
+      margin-bottom:0.25rem;
+    }
+
+    .contact-meta strong{
+      color:var(--accent-soft);
+    }
+
+    form{
+      background:var(--card);
+      border-radius:18px;
+      border:1px solid var(--border);
+      padding:1.2rem 1.25rem 1.1rem;
+      box-shadow:0 12px 32px rgba(3,10,6,0.9);
+      font-size:0.9rem;
+    }
+
+    .form-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:0.9rem;
+    }
+
+    @media(max-width:640px){
+      .form-grid{
+        grid-template-columns:1fr;
+      }
+    }
+
+    .form-field{
+      display:flex;
+      flex-direction:column;
+      gap:0.25rem;
+    }
+
+    label{
+      font-size:0.82rem;
+      color:var(--muted);
+    }
+
+    input,select,textarea{
+      border-radius:10px;
+      border:1px solid rgba(57,101,72,0.9);
+      background:#050c07;
+      color:var(--text);
+      padding:0.55rem 0.65rem;
+      font-family:inherit;
+      font-size:0.9rem;
+      outline:none;
+      transition:border 0.15s, box-shadow 0.15s, background 0.15s;
+    }
+
+    input:focus,select:focus,textarea:focus{
+      border-color:var(--accent);
+      box-shadow:0 0 0 1px rgba(46,204,113,0.5);
+      background:#040b06;
+    }
+
+    textarea{
+      min-height:90px;
+      resize:vertical;
+    }
+
+    .form-footer{
+      display:flex;
+      flex-direction:column;
+      gap:0.5rem;
+      margin-top:0.8rem;
+    }
+
+    .form-checkbox{
+      display:flex;
+      align-items:flex-start;
+      gap:0.4rem;
+      font-size:0.78rem;
+      color:var(--muted);
+    }
+
+    .form-checkbox input{
+      margin-top:0.1rem;
+      width:auto;
+    }
+
+    .disclaimer{
+      font-size:0.75rem;
+      color:var(--muted);
+    }
+
+    /* FOOTER */
+
+    footer{
+      border-top:1px solid rgba(45,76,56,0.8);
+      padding:1.4rem 0 1rem;
+      font-size:0.8rem;
+      color:var(--muted);
+    }
+
+    .footer-inner{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:space-between;
+      gap:0.7rem;
+      align-items:center;
+    }
+
+    .footer-inner a{
+      color:var(--muted);
+      text-decoration:underline;
+      text-decoration-style:dotted;
+      text-underline-offset:0.15em;
+      font-size:0.8rem;
+    }
+
+    /* FLOATING BADGE */
+
+    .spring-floating{
+      position:fixed;
+      right:1rem;
+      bottom:1rem;
+      z-index:40;
+      background:linear-gradient(135deg,#f1c40f,#e67e22);
+      color:#1b1304;
+      padding:0.6rem 0.9rem;
+      border-radius:16px;
+      box-shadow:0 18px 40px rgba(0,0,0,0.6);
+      font-size:0.76rem;
+      max-width:230px;
+      cursor:pointer;
+    }
+
+    .spring-floating strong{
+      display:block;
+      font-size:0.8rem;
+      text-transform:uppercase;
+      letter-spacing:0.09em;
+      margin-bottom:0.1rem;
+    }
+
+    .spring-floating span{
+      font-weight:600;
+    }
+
+    @media(max-width:520px){
+      .spring-floating{display:none;}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SPRING PROMO FLOATING BADGE -->
+  <div class="spring-floating" onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'});">
+    <strong>Spring 2026 Refresh</strong>
+    <span>Book a full-garden install and save 15% on labour. Limited slots each week.</span>
+  </div>
+
+  <!-- HEADER -->
+  <header>
+    <div class="top-bar">
+      <div class="container top-bar-inner">
+        <div class="top-bar-highlight">
+          <span class="badge">Spring Offer</span>
+          <span>Free on-site survey worth £75</span>
+        </div>
+        <div class="top-bar-offer">
+          Book your <strong>Spring Lawn Refresh</strong> now — limited weekly installation slots.
+        </div>
+        <div class="top-bar-note">
+          Serving domestic and small commercial clients across the local area.
+        </div>
+      </div>
+    </div>
+
+    <div class="container nav-row">
+      <div class="brand">
+        <div class="brand-mark">T</div>
+        <div>
+          <div class="brand-text-main">TurfRight</div>
+          <div class="brand-text-sub">Lawn & Turf Installation</div>
+        </div>
+      </div>
+
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#packages">Packages</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#order">Orders & Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-cta">
+        <div class="pill">
+          Spring installs from <strong>£499</strong>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">
+          <span class="tag">Spring 2026</span>
+          Prime dates now booking
+        </div>
+        <h1>
+          Transform your garden with a <span class="highlight">fresh, level, green</span> lawn.
+        </h1>
+        <p class="hero-lead">
+          TurfRight delivers professionally prepared lawns and turf installation with clean edges, level finishes and reliable drainage. Fixed-price packages, clear communication, and a clean site when we leave.
+        </p>
+        <div class="hero-pills">
+          <span>New-build lawn installation</span>
+          <span>Lawn replacement & re-turfing</span>
+          <span>Patch repairs & levelling</span>
+          <span>Domestic & small commercial</span>
+        </div>
+        <div class="hero-cta-row">
+          <a href="#order" class="btn btn-primary">Get a free spring quote</a>
+          <a href="#packages" class="btn btn-outline">View lawn packages</a>
+        </div>
+        <div class="hero-note">
+          <span>Spring Refresh Offer:</span> 15% off labour on full-garden installs booked ahead of the spring rush.
+        </div>
+      </div>
+
+      <div class="hero-media">
+        <div class="hero-card">
+          <div class="promo-pill">
+            Spring Refresh
+            <span>-15% labour</span>
+          </div>
+          <div class="hero-tagline">Typical TurfRight installation</div>
+          <div class="hero-lawn">
+            <div class="hero-lawn-label">
+              <span class="dot"></span>
+              60m² rear garden — installed in 1 day
+            </div>
+          </div>
+          <div class="hero-metrics">
+            <div>
+              <strong>Prep included</strong><br/>
+              Old lawn removed, levelled & rolled
+            </div>
+            <div>
+              <strong>Fixed appointment</strong><br/>
+              Set date, clear schedule, no surprises
+            </div>
+            <div>
+              <strong>Follow-up care</strong><br/>
+              Simple aftercare guide included
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-kicker">What we do</div>
+        <h2 class="section-title">Lawn and turf services built around real gardens</h2>
+        <p class="section-subtitle">
+          Whether you are replacing a tired patchy lawn or starting from bare soil, TurfRight provides clear, honest services with clean finishes and straightforward pricing.
+        </p>
+      </div>
+
+      <div class="cards-grid">
+        <article class="card">
+          <h3>New lawn & turf installation</h3>
+          <p>
+            Ideal for new-builds or full garden makeovers. We prepare the ground, level, compact and install fresh quality turf for an instant green finish.
+          </p>
+          <div class="chip-row">
+            <span class="chip">Ground preparation</span>
+            <span class="chip">Level and compact</span>
+            <span class="chip">Fresh quality turf</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Lawn replacement & upgrades</h3>
+          <p>
+            Old, uneven or moss-heavy lawn? We remove the existing turf, correct levels, improve the base and lay new turf for a smoother, healthier result.
+          </p>
+          <div class="chip-row">
+            <span class="chip">Removal & disposal</span>
+            <span class="chip">Levelling</span>
+            <span class="chip">Drainage consideration</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Partial repairs & patching</h3>
+          <p>
+            Only certain areas letting the garden down? We can repair high-wear spots, pet damage, and low-lying patches without replacing the entire lawn.
+          </p>
+          <div class="chip-row">
+            <span class="chip">Localised fixes</span>
+            <span class="chip">Small jobs welcome</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Small commercial & landlords</h3>
+          <p>
+            Smart, tidy lawns for rental properties, small business fronts or communal spaces. Consistent standards and punctual appointments.
+          </p>
+          <div class="chip-row">
+            <span class="chip">Lettings support</span>
+            <span class="chip">Kerb appeal boost</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PACKAGES -->
+  <section id="packages">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-kicker">Simple pricing</div>
+        <h2 class="section-title">Fixed-price lawn packages for typical UK gardens</h2>
+        <p class="section-subtitle">
+          Every garden is different, but these packages give a clear starting point. Final quotations are confirmed after a quick photo assessment or on-site survey.
+        </p>
+      </div>
+
+      <div class="cards-grid">
+        <article class="card">
+          <h3>Small Garden Refresh</h3>
+          <p>Perfect for compact front or rear gardens up to around 25–35m².</p>
+          <p class="package-price">From £499 <span>+ disposal if required</span></p>
+          <ul class="package-list">
+            <li>Old turf removed (where applicable)</li>
+            <li>Ground lightly levelled and rolled</li>
+            <li>Fresh quality turf laid with clean edges</li>
+            <li>Basic aftercare guide included</li>
+          </ul>
+          <button class="btn btn-outline" onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'});">
+            Enquire about Small Garden
+          </button>
+        </article>
+
+        <article class="card highlight">
+          <h3>Family Garden Upgrade</h3>
+          <p>Ideal for typical family gardens up to around 60–80m².</p>
+          <p class="package-price">From £899 <span>Spring labour discounts available</span></p>
+          <ul class="package-list">
+            <li>Existing lawn removed and responsibly disposed</li>
+            <li>Ground level corrected, bumps reduced, dips filled</li>
+            <li>Turf laid with tight joins and neat borders</li>
+            <li>Aftercare sheet and watering schedule provided</li>
+          </ul>
+          <button class="btn btn-primary" onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'});">
+            Get a Spring Upgrade quote
+          </button>
+        </article>
+
+        <article class="card">
+          <h3>Full Garden Makeover Partner</h3>
+          <p>For larger spaces or projects alongside patios, paths or full redesigns.</p>
+          <p class="package-price">POA <span>Project-based pricing</span></p>
+          <ul class="package-list">
+            <li>Site visit and measurement</li>
+            <li>Options for different turf grades</li>
+            <li>Coordination with other trades if needed</li>
+            <li>Staged work plan around your schedule</li>
+          </ul>
+          <button class="btn btn-outline" onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'});">
+            Discuss a larger project
+          </button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-kicker">How it works</div>
+        <h2 class="section-title">A clear, five-step process from enquiry to green lawn</h2>
+        <p class="section-subtitle">
+          No vague day-rates or guesswork. Just a simple flow that keeps you informed at every stage.
+        </p>
+      </div>
+
+      <div class="process-steps">
+        <div>
+          <div class="step-badge">1</div>
+          <div class="step-title">Quick enquiry</div>
+          <p class="step-text">Send your details, rough lawn size and a couple of photos using the form below. No obligation.</p>
+        </div>
+        <div>
+          <div class="step-badge">2</div>
+          <div class="step-title">Assessment & quote</div>
+          <p class="step-text">We review your garden, clarify what you want, and provide a clear, written quotation.</p>
+        </div>
+        <div>
+          <div class="step-badge">3</div>
+          <div class="step-title">Booking your date</div>
+          <p class="step-text">Once agreed, we confirm an installation slot and explain how to prepare the space.</p>
+        </div>
+        <div>
+          <div class="step-badge">4</div>
+          <div class="step-title">Installation day</div>
+          <p class="step-text">We arrive on time, carry out the work, clean up and leave you with a brand-new lawn.</p>
+        </div>
+        <div>
+          <div class="step-badge">5</div>
+          <div class="step-title">Aftercare support</div>
+          <p class="step-text">You receive a simple aftercare guide and can contact us with any questions as the lawn establishes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-kicker">Before & after</div>
+        <h2 class="section-title">Real-world transformations for real gardens</h2>
+        <p class="section-subtitle">
+          Swap patchy, uneven or muddy lawns for a clean, level green space that’s ready for family use, pets and outdoor furniture.
+        </p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item" style="background-image:url('https://images.unsplash.com/photo-1597262975002-c5c3b14bbd62?auto=format&fit=crop&w=900&q=80');background-size:cover;background-position:center;">
+          <div class="gallery-label">New-build lawn installation</div>
+        </div>
+        <div class="gallery-item" style="background-image:url('https://images.unsplash.com/photo-1597262974602-836bbc8d5205?auto=format&fit=crop&w=900&q=80');background-size:cover;background-position:center;">
+          <div class="gallery-label">Full re-turf after renovation</div>
+        </div>
+        <div class="gallery-item" style="background-image:url('https://images.unsplash.com/photo-1597262974473-9fa58f75ae1e?auto=format&fit=crop&w=900&q=80');background-size:cover;background-position:center;">
+          <div class="gallery-label">Family garden ready for summer</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-kicker">Questions</div>
+        <h2 class="section-title">Frequently asked questions</h2>
+        <p class="section-subtitle">
+          Straightforward answers to the most common questions about turf installation, timescales and aftercare.
+        </p>
+      </div>
+
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h3>How long does a typical install take?</h3>
+          <p>Many small to medium lawns can be completed in a single day once materials are on site. Larger or complex areas may take longer, which will be explained at quotation stage.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Do you remove and dispose of the old lawn?</h3>
+          <p>Yes, for full replacement projects we can remove and dispose of the existing turf as part of the quotation. This will be clearly itemised so you know what is included.</p>
+        </div>
+        <div class="faq-item">
+          <h3>When can the lawn be used after installation?</h3>
+          <p>Most new lawns need around 2–4 weeks to root in properly. Light access is fine, but we recommend avoiding heavy use until the turf has knitted firmly into the soil.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Do you offer any guarantees?</h3>
+          <p>We take care to install correctly and provide clear aftercare guidance. As turf is a living product and depends on watering and maintenance, guarantees are limited and will be explained with your quotation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORDER & CONTACT -->
+  <section id="order" class="order-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-kicker">Orders & contact</div>
+        <h2 class="section-title">Request a quote or book a Spring survey</h2>
+        <p class="section-subtitle">
+          Use the form below to tell us about your lawn. There is no obligation and we will get back to you with next steps and an estimated price range.
+        </p>
+      </div>
+
+      <div class="order-layout">
+        <div>
+          <p class="order-highlight">
+            <strong>Spring Refresh Promotion:</strong> Save 15% on labour costs for full-garden installations booked ahead of the main spring rush. Offer subject to available dates and confirmed quotation.
+          </p>
+          <div class="order-callout">
+            <span class="badge">What helps us quote faster</span>
+            Please include a rough lawn size (for example 5m x 8m), whether you need full replacement or a new install, and, if possible, mention that you can send photos separately by email or message. The more detail you provide, the more accurate your initial estimate will be.
+          </div>
+          <div class="contact-meta">
+            <div><strong>Typical response time:</strong> within 1 working day.</div>
+            <div><strong>Service area:</strong> Local and surrounding areas (subject to confirmation at quotation stage).</div>
+            <div><strong>Work carried out:</strong> Domestic gardens, small commercial lawns, landlords and letting agents.</div>
+          </div>
+        </div>
+
+        <div>
+          <form action="mailto:youremail@example.com" method="post" enctype="text/plain">
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="name">Name</label>
+                <input id="name" name="Name" type="text" placeholder="Full name" required />
+              </div>
+              <div class="form-field">
+                <label for="phone">Phone number</label>
+                <input id="phone" name="Phone" type="tel" placeholder="Best contact number" required />
+              </div>
+              <div class="form-field">
+                <label for="email">Email address</label>
+                <input id="email" name="Email" type="email" placeholder="you@example.com" required />
+              </div>
+              <div class="form-field">
+                <label for="postcode">Postcode</label>
+                <input id="postcode" name="Postcode" type="text" placeholder="e.g. DN7 4XX" required />
+              </div>
+              <div class="form-field">
+                <label for="service">Type of service</label>
+                <select id="service" name="Service" required>
+                  <option value="">Please select…</option>
+                  <option value="New install">New lawn / turf install</option>
+                  <option value="Full replacement">Full lawn replacement</option>
+                  <option value="Repairs">Patch repairs / partial work</option>
+                  <option value="Commercial">Commercial / landlord</option>
+                  <option value="Other">Other / not sure</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="size">Approximate lawn size</label>
+                <input id="size" name="Size" type="text" placeholder="e.g. 5m x 8m rear lawn" />
+              </div>
+            </div>
+
+            <div class="form-field" style="margin-top:0.8rem;">
+              <label for="message">Tell us about your lawn</label>
+              <textarea id="message" name="Message" placeholder="Briefly describe the current lawn, any issues (uneven, moss, shade, pets) and what you would like it to look like."></textarea>
+            </div>
+
+            <div class="form-footer">
+              <div class="form-checkbox">
+                <input id="spring" type="checkbox" name="Spring offer" value="Yes" />
+                <label for="spring">I am interested in the Spring Refresh labour discount for full-garden installations (subject to availability).</label>
+              </div>
+              <div class="form-checkbox">
+                <input id="updates" type="checkbox" name="Updates" value="Yes" />
+                <label for="updates">I am happy to receive occasional updates about seasonal availability and lawn care tips.</label>
+              </div>
+              <button type="submit" class="btn btn-primary">Send my enquiry</button>
+              <div class="disclaimer">
+                By submitting this form you agree that TurfRight may use your details to respond to your enquiry. You can request removal of your details at any time.
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-inner">
+      <div>
+        &copy; <span id="year"></span> TurfRight. All rights reserved.
+      </div>
+      <div>
+        Informal estimates are subject to a site assessment. Final quotations and availability will be confirmed in writing.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
