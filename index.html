@@ -45,7 +45,7 @@ footer{background:var(--i);color:#d8e4da;padding:35px 0}.foot{display:flex;justi
 <div class="buttons"><a class="btn pri" href="#shop">Shop the collection</a><a class="btn sec" href="#kits">Explore garden kits</a></div>
 </div><div class="visual"><div class="vcard"><b>Plant now. Enjoy spring.</b><small>Curated essentials for seasonal garden jobs, with useful bundles to keep things simple.</small></div></div></div></section>
 
-<section id="shop"><div class="w"><div class="head"><div><div class="k">Shop seasonal</div><h2>Autumn essentials</h2></div><p>A focused launch range built around practical garden jobs. Prices shown are the planned Garden Company retail prices.</p></div>
+<section id="shop"><div class="w"><div class="head"><div><div class="k">Shop seasonal</div><h2>Autumn essentials</h2></div><p>A focused range built around practical seasonal jobs. Initial products are sourced from a UK wholesale garden supplier and priced for sustainable retail margins; stock and final delivered trade costs are checked before each purchase.</p></div>
 <div class="products" id="products"></div></div></section>
 
 <section id="kits" class="green"><div class="w"><div class="head"><div><div class="k">The Garden Company collections</div><h2>Buy the job, not the clutter.</h2></div><p>Simple bundles around what gardeners actually want to get done this season.</p></div>
@@ -64,14 +64,24 @@ footer{background:var(--i);color:#d8e4da;padding:35px 0}.foot{display:flex;justi
 
 <script>
 const products=[
-{id:1,name:'Heavy-Duty Garden Waste Bags',price:14.99,icon:'🍂',tag:'Autumn reset',desc:'Reusable garden waste bags with handles for seasonal clear-up jobs.'},
-{id:2,name:'Gardening Gloves · 4 Pair Set',price:12.99,icon:'🧤',tag:'Garden care',desc:'Comfortable non-slip gloves for everyday garden work.'},
-{id:3,name:'Horticultural Plant Fleece',price:19.99,icon:'❄️',tag:'Winter ready',desc:'Breathable fleece protection for vulnerable plants and containers.'},
-{id:4,name:'Window Bird Feeder',price:14.99,icon:'🐦',tag:'Wildlife',desc:'Simple clear feeder for bringing garden birds closer to the window.'},
-{id:5,name:'Plant Labels · 50 Pack',price:9.99,icon:'🏷️',tag:'Spring planting',desc:'Reusable plant labels for bulbs, seedlings, herbs and flowers.'},
-{id:6,name:'Flexible Plant Tie',price:8.99,icon:'🌱',tag:'Plant care',desc:'Soft flexible tie for supporting plants without harsh wire.'},
-{id:7,name:'Garden Pruning Shears',price:11.99,icon:'✂️',tag:'Garden care',desc:'Compact pruning shears for routine seasonal maintenance.'},
-{id:8,name:'Insect Hotel Kit',price:19.99,icon:'🐝',tag:'Wildlife',desc:'A simple habitat addition for a more wildlife-friendly garden.'}
+{id:1,name:'Garden Waste Bag',price:9.99,icon:'🍂',tag:'Autumn reset',desc:'Reusable pop-up garden waste bag for leaves, cuttings and seasonal clear-up.'},
+{id:2,name:'Latex Gardening Gloves · 3 Pair',price:9.99,icon:'🧤',tag:'Garden care',desc:'Three-pair coated gardening gloves for everyday outdoor jobs.'},
+{id:3,name:'Pruning Shears',price:8.99,icon:'✂️',tag:'Garden care',desc:'Compact pruning shears for routine seasonal pruning and maintenance.'},
+{id:4,name:'Patio Weed Brush',price:7.99,icon:'🧹',tag:'Autumn reset',desc:'Practical hand tool for clearing weeds and debris from hard surfaces.'},
+{id:5,name:'Twistee Garden Wire · 50m',price:6.99,icon:'🪴',tag:'Plant care',desc:'Flexible garden wire for securing plants, supports and seasonal growth.'},
+{id:6,name:'Soft Twist Plant Tie · 10m',price:6.99,icon:'🌱',tag:'Plant care',desc:'Soft reusable tie for supporting plants without harsh wire.'},
+{id:7,name:'Plant Twists · 100 Pack',price:6.99,icon:'🌿',tag:'Plant care',desc:'Ready-to-use plant twists for quick support and training.'},
+{id:8,name:'Seed Labels + Pencil · 50 Pack',price:7.99,icon:'🏷️',tag:'Spring planting',desc:'50 seed labels with pencil for bulbs, seedlings, herbs and flowers.'},
+{id:9,name:'Garden Hand Trowel',price:7.99,icon:'🪴',tag:'Spring planting',desc:'Essential hand tool for planting, potting and border work.'},
+{id:10,name:'Multi-Purpose Trays · 2 Pack',price:6.99,icon:'🌱',tag:'Spring planting',desc:'Useful trays for propagation, pots and organised planting.'},
+{id:11,name:'Jumbo Kneeling Pad',price:7.99,icon:'🧎',tag:'Garden comfort',desc:'Simple padded protection for planting, weeding and low-level garden work.'},
+{id:12,name:'Garden Weeding Set · 2 Pack',price:7.99,icon:'🌱',tag:'Autumn reset',desc:'Compact hand tools for removing weeds and refreshing beds.'},
+{id:13,name:'Garden Netting · 6 x 4m',price:9.99,icon:'🛡️',tag:'Winter ready',desc:'Flexible netting for seasonal plant and crop protection.'},
+{id:14,name:'Bamboo Flower Sticks · 20 Pack',price:7.99,icon:'🎋',tag:'Plant support',desc:'Natural bamboo supports for flowers and young plants.'},
+{id:15,name:'Garden Twine · 200m',price:7.99,icon:'🧵',tag:'Garden care',desc:'Long-length garden twine for tying, training and general garden jobs.'},
+{id:16,name:'Plant Pots · 13cm 3 Pack',price:7.99,icon:'🪴',tag:'Spring planting',desc:'Three practical pots for repotting and growing seasonal plants.'},
+{id:17,name:'Hook & Loop Tie Tape · 3 Pack',price:7.99,icon:'🔗',tag:'Plant care',desc:'Reusable hook-and-loop ties for adjustable plant support.'},
+{id:18,name:'Heavy-Duty Tool Set · 3 Pack',price:12.99,icon:'🛠️',tag:'Garden care',desc:'Three-piece hand tool set for everyday planting and maintenance.'}
 ];
 let cart=[];
 const money=n=>'£'+n.toFixed(2);
@@ -86,7 +96,7 @@ function renderCart(){
  if(!cart.length){el.innerHTML='<p class="muted">Your basket is empty.</p>';sum.innerHTML='';return;}
  el.innerHTML=cart.map(i=>{const p=products.find(x=>x.id===i.id);return `<div class="cartRow"><div><b>${p.name}</b><small>${money(p.price)} each</small></div><div class="qty"><button onclick="change(${p.id},-1)">−</button> ${i.qty} <button onclick="change(${p.id},1)">+</button></div></div>`}).join('');
  const subtotal=cart.reduce((a,i)=>a+i.qty*products.find(p=>p.id===i.id).price,0),delivery=subtotal>=50?0:3.99,total=subtotal+delivery;
- sum.innerHTML=`<div class="summary"><div class="summaryLine"><span>Subtotal</span><b>${money(subtotal)}</b></div><div class="summaryLine"><span>UK delivery</span><b>${delivery?money(delivery):'FREE'}</b></div><div class="summaryLine total"><span>Total</span><span>${money(total)}</span></div><div class="notice">Free UK delivery on orders of £50 or more. Product availability and final delivery dates will be confirmed before payment.</div><button class="btn pri checkout" onclick="checkout()">Proceed to checkout</button><div class="muted" style="text-align:center;margin-top:10px">Secure card/payment integration is the final launch connection.</div></div>`;
+ sum.innerHTML=`<div class="summary"><div class="summaryLine"><span>Subtotal</span><b>${money(subtotal)}</b></div><div class="summaryLine"><span>UK delivery</span><b>${delivery?money(delivery):'FREE'}</b></div><div class="summaryLine total"><span>Total</span><span>${money(total)}</span></div><div class="notice">Free UK delivery on orders of £50 or more. Product availability and final delivery dates will be confirmed before payment.</div><button class="btn pri checkout" onclick="checkout()">Proceed to checkout</button><div class="muted" style="text-align:center;margin-top:10px">Payment integration is the final launch connection. Orders are not accepted until a payment provider is connected.</div></div>`;
 }
 function checkout(){note('Checkout connection is ready to be connected to the payment provider.');}
 function openCart(){document.getElementById('drawer').classList.add('on');renderCart();}
