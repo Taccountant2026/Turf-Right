@@ -83,7 +83,7 @@ const products=[
 {id:17,name:'Hook & Loop Tie Tape · 3 Pack',price:7.99,icon:'🔗',tag:'Plant care',desc:'Reusable hook-and-loop ties for adjustable plant support.'},
 {id:18,name:'Heavy-Duty Tool Set · 3 Pack',price:12.99,icon:'🛠️',tag:'Garden care',desc:'Three-piece hand tool set for everyday planting and maintenance.'}
 ];
-let cart=[];
+let cart=JSON.parse(localStorage.getItem('gardenCart')||'[]');
 const money=n=>'£'+n.toFixed(2);
 function renderProducts(){
  document.getElementById('products').innerHTML=products.map(p=>`<article class="prod"><div><div class="icon">${p.icon}</div><span class="tag">${p.tag}</span><h3>${p.name}</h3><p>${p.desc}</p></div><div class="price">${money(p.price)} <button class="add" onclick="add(${p.id})">Add to basket</button></div></article>`).join('');
@@ -91,14 +91,15 @@ function renderProducts(){
 function add(id){const x=cart.find(i=>i.id===id);if(x)x.qty++;else cart.push({id,qty:1});renderCart();note('Added to basket');}
 function change(id,d){const x=cart.find(i=>i.id===id);if(!x)return;x.qty+=d;if(x.qty<1)cart=cart.filter(i=>i.id!==id);renderCart();}
 function renderCart(){
+ localStorage.setItem('gardenCart',JSON.stringify(cart));
  const count=cart.reduce((a,i)=>a+i.qty,0);document.getElementById('count').textContent=count;
  const el=document.getElementById('cart'),sum=document.getElementById('summary');
  if(!cart.length){el.innerHTML='<p class="muted">Your basket is empty.</p>';sum.innerHTML='';return;}
  el.innerHTML=cart.map(i=>{const p=products.find(x=>x.id===i.id);return `<div class="cartRow"><div><b>${p.name}</b><small>${money(p.price)} each</small></div><div class="qty"><button onclick="change(${p.id},-1)">−</button> ${i.qty} <button onclick="change(${p.id},1)">+</button></div></div>`}).join('');
  const subtotal=cart.reduce((a,i)=>a+i.qty*products.find(p=>p.id===i.id).price,0),delivery=subtotal>=50?0:3.99,total=subtotal+delivery;
- sum.innerHTML=`<div class="summary"><div class="summaryLine"><span>Subtotal</span><b>${money(subtotal)}</b></div><div class="summaryLine"><span>UK delivery</span><b>${delivery?money(delivery):'FREE'}</b></div><div class="summaryLine total"><span>Total</span><span>${money(total)}</span></div><div class="notice">Free UK delivery on orders of £50 or more. Product availability and final delivery dates will be confirmed before payment.</div><button class="btn pri checkout" onclick="checkout()">Proceed to checkout</button><div class="muted" style="text-align:center;margin-top:10px">Payment integration is the final launch connection. Orders are not accepted until a payment provider is connected.</div></div>`;
+ sum.innerHTML=`<div class="summary"><div class="summaryLine"><span>Subtotal</span><b>${money(subtotal)}</b></div><div class="summaryLine"><span>UK delivery</span><b>${delivery?money(delivery):'FREE'}</b></div><div class="summaryLine total"><span>Total</span><span>${money(total)}</span></div><div class="notice">Free UK delivery on orders of £50 or more. Product availability and final delivery dates will be confirmed before payment.</div><button class="btn pri checkout" onclick="checkout()">Proceed to checkout</button><div class="muted" style="text-align:center;margin-top:10px">Review your delivery details and complete your order securely at checkout.</div></div>`;
 }
-function checkout(){note('Checkout connection is ready to be connected to the payment provider.');}
+function checkout(){if(!cart.length)return;localStorage.setItem('gardenCart',JSON.stringify(cart));window.location.href='checkout.html';}
 function openCart(){document.getElementById('drawer').classList.add('on');renderCart();}
 function closeCart(){document.getElementById('drawer').classList.remove('on');}
 function note(x){const t=document.getElementById('toast');t.textContent=x;t.classList.add('on');setTimeout(()=>t.classList.remove('on'),2200);}
