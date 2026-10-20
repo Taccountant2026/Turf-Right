@@ -51,7 +51,7 @@ export function projectBrief(fields={}) {
   const clean=(value,max=1000)=>String(value||'').replace(/[\u0000-\u0008\u000b\u000c\u000e-\u001f]/g,'').trim().slice(0,max);
   const goal=clean(fields.goal);
   if(goal.length<10)throw new Error('Tell us a little more about your garden goal (at least 10 characters).');
-  return ['THE GARDEN COMPANY — MY PROJECT BRIEF','A starting point for discussion; no visit or work is booked.','',
+  return ['THE OUTDOOR LIVING CO. — MY PROJECT BRIEF','A starting point for discussion; no visit or work is booked.','',
     `Project: ${clean(fields.project,80)||'To discuss'}`,`Goal: ${goal}`,`Approximate area: ${clean(fields.size,120)||'To discuss'}`,
     `Town or postcode district: ${clean(fields.area,80)||'To discuss'}`,`Timing: ${clean(fields.timing,80)||'Flexible / to discuss'}`,
     `Indicative budget: ${clean(fields.budget,80)||'To discuss'}`,`Access and things to keep: ${clean(fields.access,700)||'To discuss'}`,

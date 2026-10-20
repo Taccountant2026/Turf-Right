@@ -1,5 +1,5 @@
 export const shop = Object.freeze({
-  name: 'The Garden Company',
+  name: 'The Outdoor Living Co.',
   baseUrl: 'https://taccountant2026.github.io/Turf-Right/',
   checkoutEnabled: false,
   stockConfirmed: false,

@@ -1,10 +1,10 @@
-# The Garden Company
+# The Outdoor Living Co.
 
 A complete static garden site with 43 pages, an 18-product planned catalogue, project enquiries, seasonal planner, five original garden guides and the Potting Bench.
 
 Public site: https://taccountant2026.github.io/Turf-Right/
 
-The repository keeps the historic `Turf-Right` name; the public brand is The Garden Company.
+The repository keeps the historic `Turf-Right` name; the public brand is The Outdoor Living Co..
 
 ## Build and checks
 
