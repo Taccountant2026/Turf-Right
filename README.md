@@ -1,62 +1,57 @@
 # The Garden Company
 
-Seasonal garden essentials storefront.
+A complete static garden site with 43 pages, an 18-product planned catalogue, project enquiries, seasonal planner, five original garden guides and the Potting Bench.
 
-## Locked launch catalogue
+Public site: https://taccountant2026.github.io/Turf-Right/
 
-The storefront now contains 18 initial products with planned retail pricing based on current UK wholesale evidence from Gem Imports. Gem currently lists low-carton garden essentials including pruning shears at £0.68/unit, plant clips at £0.55, jumbo kneeling pads at £0.72, plant twists at £0.48, pop-up garden waste bags at £2.50, latex coated gardening gloves 3pk at £1.40, patio weed brushes at £0.95, garden netting 6x4m at £1.25, garden twine 200m at £0.63, hand trowels at £0.63, seed labels + pencil 50pk at £0.65 and other related products. Prices are excl. VAT and carton minimums apply. citeturn0search0
+The repository keeps the historic `Turf-Right` name; the public brand is The Garden Company.
 
-### Current retail catalogue
+## Build and checks
 
-- Garden Waste Bag — £9.99
-- Latex Gardening Gloves · 3 Pair — £9.99
-- Pruning Shears — £8.99
-- Patio Weed Brush — £7.99
-- Twistee Garden Wire · 50m — £6.99
-- Soft Twist Plant Tie · 10m — £6.99
-- Plant Twists · 100 Pack — £6.99
-- Seed Labels + Pencil · 50 Pack — £7.99
-- Garden Hand Trowel — £7.99
-- Multi-Purpose Trays · 2 Pack — £6.99
-- Jumbo Kneeling Pad — £7.99
-- Garden Weeding Set · 2 Pack — £7.99
-- Garden Netting · 6 x 4m — £9.99
-- Bamboo Flower Sticks · 20 Pack — £7.99
-- Garden Twine · 200m — £7.99
-- Plant Pots · 13cm 3 Pack — £7.99
-- Hook & Loop Tie Tape · 3 Pack — £7.99
-- Heavy-Duty Tool Set · 3 Pack — £12.99
+No third-party dependencies are required. Use Node 22+ and Python 3:
 
-Retail prices are planned prices, not supplier quotations. Final trade cost, VAT treatment, stock availability, carriage and product specification must be confirmed at purchase.
+```
+node scripts/build.mjs
+node --test tests/*.test.mjs
+python3 scripts/check-links.py
+```
 
-## Supplier
+The generator writes tracked HTML, sitemap, robots and favicon files into the repository root. Commit both source and regenerated outputs. The existing GitHub Pages workflow publishes the root, so all links include the correct project path. `catalogue.mjs` is the single catalogue and journal source; `garden-core.mjs` contains basket and planning rules; `app.mjs` supplies browser interactions. Images and original SVG illustrations are local, with no external font or tracking scripts.
 
-Primary launch supplier: **Gem Imports Ltd** for the initial garden-essentials range. The supplier advertises low minimum carton quantities and current stock on many of the listed products. citeturn0search0
+## What works now
 
-This does **not** mean stock has been purchased or reserved. “Locked” means the current website catalogue and pricing strategy are based on this supplier; purchasing remains subject to live stock, account pricing and cash-flow checks.
+- All 18 planned products have details, original illustrations and related products.
+- Catalogue search, job/category filters, sorting, collections and deep links.
+- Persistent saved basket, legacy `gardenCart` migration, quantity controls and integer-pence totals.
+- Seasonal planner with 192 combinations, checkboxes, optional local saving, copy, download and print.
+- Project brief builder with copy/download and explicit private submission.
+- Private contact form with product context, Garden Company route labels, validation, honeypot, origin checks and safe retry IDs.
+- Five original guides with primary RHS references, community challenges and prompts.
+- About, questions, contact, shop/delivery status, privacy, terms, orders/returns and a recovery page.
+- Links to the owner's Bytova and RetroReplay UK businesses.
 
-## Store features
+## Private enquiry connection
 
-- Responsive Garden Company storefront
-- Autumn 2026 catalogue
-- 18 launch products
-- Working client-side basket
-- Quantity controls
-- UK delivery calculation
-- £50 free-delivery threshold
-- Seasonal collection sections
-- Wildlife section
-- Email-signup interface
-- Mobile-friendly layout
+Explicitly submitted enquiries go to `https://retroreplay.uk/api/leads`, the existing owner-controlled private service. The RRUK service accepts this exact GitHub Pages origin and validates brand `garden`, approved routes, read-privacy confirmation and bounded fields. Messages cannot become public stories. The private owner pipeline at https://retroreplay.uk/admin#funnels has a Garden Company filter, next actions, dates and manual reply drafts.
 
-## Launch connections still required
+Owner alerts use the existing enabled owner-email configuration. Garden enquiries do not automatically send a customer acknowledgement, book a visit, place an order or subscribe anyone to marketing. Do not send real test enquiries without the owner's authorization: they can create records and owner alerts.
 
-1. Open/verify the trade supplier account and confirm delivered costs.
-2. Purchase a small validation quantity rather than bulk stock.
-3. Connect a real payment provider.
-4. Add real business contact details and domain email.
-5. Finalize accurate UK terms, privacy, returns and delivery policies.
-6. Complete a real test order.
-7. Verify hosting/deployment and custom domain.
+## Shop launch gates
 
-The repository is currently named `Turf-Right`; the customer-facing brand is **The Garden Company**.
+`checkoutEnabled` and `stockConfirmed` remain **false**. Every product is coming soon. Saving a basket does not reserve stock; the review page collects no address or payment. Prices are planned. £3.99 delivery / free from £50 are proposed figures only, with no promised delivery area or speed.
+
+The previous launch plan named Gem Imports as a prospective supplier. That does not mean an account is verified, delivered costs confirmed or stock bought/reserved. Before taking orders:
+
+1. Confirm the supplier account, final models/pack details, delivered costs and actual stock.
+2. Decide actual sale prices, delivery coverage/carriers and dispatch/return arrangements.
+3. Supply verified seller contact/business details and appropriate sale/delivery/returns policies.
+4. Connect secure real payments and implement trusted server-side pricing, orders, stock controls, confirmations and fulfilment. A browser flag alone cannot safely open sales.
+5. Complete a full authorized test order and delivery/refund checks before enabling checkout.
+
+## Projects and contact
+
+The owner chose shop plus garden projects, with **each job discussed first**. No fixed service commitment or service area is invented. Scope, location, access, timing and a written quote must be agreed before work. Garden phone, public email and coverage details are still to follow; the working private enquiry form is the current contact route.
+
+## Imagery and community
+
+The original home image is generated garden inspiration, not completed customer work. Product SVGs are illustrations, not confirmed supplier photographs. The Potting Bench currently offers prompts, challenges, private questions and guides; there are no public uploads, member accounts, fabricated reviews or newsletter signups.

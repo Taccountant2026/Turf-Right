@@ -1,0 +1,10 @@
+import {escapeHtml as e,money} from './garden-core.mjs';
+import {productArt} from './art.mjs';
+export function productCard(p,root='./'){
+ return `<article class="product-card"><a class="product-image" href="${root}products/${p.slug}.html" aria-label="View ${e(p.name)}">${productArt(p.art)}<span class="coming-tag">Coming soon · illustration</span></a><div class="product-info"><span class="product-category">${e(p.category)}</span><h3><a href="${root}products/${p.slug}.html">${e(p.name)}</a></h3><p>${e(p.description)}</p></div><div class="product-bottom"><span class="price">${money(p.price)}<small>planned price</small></span><button class="add-button" type="button" data-add="${p.slug}" aria-label="Save ${e(p.name)} to basket">Save to basket</button></div></article>`;
+}
+export function productGrid(list,root='./'){return list.map(p=>productCard(p,root)).join('');}
+export function summary(totals){return `<div class="summary-lines"><div><span>Planned items subtotal</span><strong>${money(totals.subtotal)}</strong></div><div><span>Proposed delivery${totals.subtotal>=5000?' · threshold reached':''}</span><strong>${totals.count?money(totals.delivery):'—'}</strong></div><div class="total"><span>Illustrative total</span><strong>${money(totals.total)}</strong></div></div><p class="small-note">Delivery proposal: £3.99, free from £50. Coverage, prices and final delivery terms must be confirmed before sales open. Saving a basket does not reserve stock.</p>`;}
+export function basketLine(p,line,root='./'){
+ return `<div class="basket-line"><div><h3><a href="${root}products/${p.slug}.html">${e(p.name)}</a></h3><p>Coming soon · ${money(p.price)} planned each</p><div class="quantity"><button type="button" data-qty="${p.slug}" data-change="-1" aria-label="Reduce ${e(p.name)} quantity">−</button><span>${line.qty}</span><button type="button" data-qty="${p.slug}" data-change="1" aria-label="Increase ${e(p.name)} quantity" ${line.qty>=20?'disabled':''}>+</button></div><button class="remove-button" type="button" data-remove="${p.slug}">Remove ${e(p.name)}</button></div><strong>${money(p.price*line.qty)}</strong></div>`;
+}
