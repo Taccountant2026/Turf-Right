@@ -1,6 +1,6 @@
 export const shop = Object.freeze({
-  name: 'Woldwynd Outdoor Living',
-  baseUrl: 'https://taccountant2026.github.io/Turf-Right/',
+  name: 'Stone & Sprig',
+  baseUrl: 'https://stoneandsprig.co.uk/',
   checkoutEnabled: false,
   stockConfirmed: false,
   contactEmail: '',
