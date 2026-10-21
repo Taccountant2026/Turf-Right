@@ -1,10 +1,10 @@
-# Woldwynd Outdoor Living
+# Stone & Sprig
 
 A complete static garden site with 43 pages, an 18-product planned catalogue, project enquiries, seasonal planner, five original garden guides and the Potting Bench.
 
-Public site: https://taccountant2026.github.io/Turf-Right/
+Public site: https://stoneandsprig.co.uk/
 
-The repository keeps the historic `Turf-Right` name; the public brand is Woldwynd Outdoor Living.
+The repository keeps the historic `Turf-Right` name; the public brand is Stone & Sprig.
 
 ## Build and checks
 
@@ -25,14 +25,14 @@ The generator writes tracked HTML, sitemap, robots and favicon files into the re
 - Persistent saved basket, legacy `gardenCart` migration, quantity controls and integer-pence totals.
 - Seasonal planner with 192 combinations, checkboxes, optional local saving, copy, download and print.
 - Project brief builder with copy/download and explicit private submission.
-- Private contact form with product context, Woldwynd route labels, validation, honeypot, origin checks and safe retry IDs.
+- Private contact form with product context, Stone & Sprig route labels, validation, honeypot, origin checks and safe retry IDs.
 - Five original guides with primary RHS references, community challenges and prompts.
 - About, questions, contact, shop/delivery status, privacy, terms, orders/returns and a recovery page.
 - Links to the owner's Bytova and RetroReplay UK businesses.
 
 ## Private enquiry connection
 
-Explicitly submitted enquiries go to `https://retroreplay.uk/api/leads`, the existing owner-controlled private service. The RRUK service accepts this exact GitHub Pages origin and validates brand `garden`, approved routes, read-privacy confirmation and bounded fields. Messages cannot become public stories. The private owner pipeline at https://retroreplay.uk/admin#funnels has a Woldwynd filter, next actions, dates and manual reply drafts.
+Explicitly submitted enquiries go to `https://retroreplay.uk/api/leads`, the existing owner-controlled private service. The RRUK service accepts this exact GitHub Pages origin and validates brand `garden`, approved routes, read-privacy confirmation and bounded fields. Messages cannot become public stories. The private owner pipeline at https://retroreplay.uk/admin#funnels has a Stone & Sprig filter, next actions, dates and manual reply drafts.
 
 Owner alerts use the existing enabled owner-email configuration. Garden enquiries do not automatically send a customer acknowledgement, book a visit, place an order or subscribe anyone to marketing. Do not send real test enquiries without the owner's authorization: they can create records and owner alerts.
 
