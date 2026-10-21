@@ -3,9 +3,9 @@ export const events=['page_view','start_tool','complete_tool','save_item','begin
 export function readChoice(raw,now=Date.now()){try{const v=typeof raw==='string'?JSON.parse(raw):raw;if(v?.version!==1||typeof v.allowed!=='boolean'||!Number.isSafeInteger(v.at)||v.at>now+60000||now-v.at>180*86400000)return null;return {version:1,allowed:v.allowed,at:v.at};}catch{return null;}}
 export function publicPage(brand,path){
  if(!['rruk','bytova','garden'].includes(brand)||typeof path!=='string'||path.length>180||/[?#%\\\s]/.test(path))return null;
- if(path==='/index.html'&&brand==='bytova')return '/';if(path==='/Turf-Right/index.html'&&brand==='garden')return '/Turf-Right/';
+ if(path==='/index.html'&&brand==='bytova')return '/';if((path==='/index.html'||path==='/Turf-Right/index.html')&&brand==='garden')return '/';
  if(brand==='rruk')return /^\/(?:admin|api|order|chatgpt-auth)(?:\/|$)/.test(path)?null:/^\/[a-z0-9/*-]*$/.test(path)?path:null;
- if(brand==='garden')return path==='/Turf-Right/'||/^\/Turf-Right\/(?:[a-z0-9-]+\/)?[a-z0-9-]+\.html$/.test(path)&&!path.endsWith('/checkout.html')&&!path.endsWith('/404.html')?path:null;
+ if(brand==='garden'){const p=path.startsWith('/Turf-Right/')?path.slice('/Turf-Right'.length):path;return p==='/'||/^\/(?:[a-z0-9-]+\/)?[a-z0-9-]+\.html$/.test(p)&&!p.endsWith('/checkout.html')&&!p.endsWith('/404.html')?p:null;}
  return path==='/'||/^\/[a-z0-9-]+\.html$/.test(path)&&path!=='/404.html'?path:null;
 }
 export function permittedEvent({choice,brand,path,event,campaign,doNotTrack=false,preview=false},now=Date.now()){
