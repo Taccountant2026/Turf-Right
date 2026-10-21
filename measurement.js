@@ -4,7 +4,7 @@
  if(!['rruk','bytova','garden'].includes(brand))return;
  const scriptUrl=script.src;
  import(new URL('statistics-core.mjs',scriptUrl).href).then(({readChoice,permittedEvent})=>{
-  const key='business-statistics-choice-v1',preview=!['retroreplay.uk','bytova.co.uk','www.bytova.co.uk','taccountant2026.github.io'].includes(location.hostname),doNotTrack=navigator.globalPrivacyControl===true||navigator.doNotTrack==='1';
+  const key='business-statistics-choice-v1',preview=!['retroreplay.uk','bytova.co.uk','www.bytova.co.uk','taccountant2026.github.io','stoneandsprig.co.uk','www.stoneandsprig.co.uk'].includes(location.hostname),doNotTrack=navigator.globalPrivacyControl===true||navigator.doNotTrack==='1';
   if(brand==='rruk'&&/^\/(?:admin|api|order|chatgpt-auth)(?:\/|$)/.test(location.pathname))return;
   let choice=null,viewSent=false,panel=null,returnFocus=null;
   try{choice=readChoice(localStorage.getItem(key));}catch{}
