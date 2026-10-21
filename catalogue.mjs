@@ -1,5 +1,5 @@
 export const shop = Object.freeze({
-  name: 'Wold & Willow Outdoor Living',
+  name: 'Woldwynd Outdoor Living',
   baseUrl: 'https://taccountant2026.github.io/Turf-Right/',
   checkoutEnabled: false,
   stockConfirmed: false,
