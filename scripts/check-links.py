@@ -1,11 +1,12 @@
-"""Check the built site under its real GitHub Pages project path."""
+"""Check built pages and local assets against the store's configured origin."""
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlsplit, unquote, urljoin
-import sys
+import sys, re
 
 ROOT = Path(__file__).resolve().parent.parent
-BASE = 'https://taccountant2026.github.io/Turf-Right/'
+BASE = re.search(r"baseUrl:\s*'([^']+)'", (ROOT/'catalogue.mjs').read_text()).group(1)
+BASE_URL = urlsplit(BASE)
 class Page(HTMLParser):
     def __init__(self, text):
         super().__init__(convert_charrefs=True)
@@ -37,9 +38,9 @@ for path, page in pages.items():
     for ref in page.refs:
         url = urlsplit(urljoin(BASE+rel, ref))
         assert url.scheme in ('https', 'http', 'mailto'), rel+' unsafe or empty link: '+ref
-        if url.netloc != 'taccountant2026.github.io': continue
-        assert url.path.startswith('/Turf-Right/'), rel+' escaped the project path: '+ref
-        suffix = unquote(url.path.removeprefix('/Turf-Right/')) or 'index.html'
+        if url.netloc != BASE_URL.netloc: continue
+        assert url.path.startswith(BASE_URL.path), rel+' escaped the site path: '+ref
+        suffix = unquote(url.path.removeprefix(BASE_URL.path)) or 'index.html'
         target = (ROOT / suffix).resolve()
         assert target.is_relative_to(ROOT) and target.is_file(), rel+' broken link: '+ref
         if url.fragment and target in pages: assert unquote(url.fragment) in pages[target].ids, rel+' missing anchor: '+ref
@@ -47,4 +48,4 @@ for path, page in pages.items():
 assert len(files) == 43, 'unexpected built page count'
 assert len(list((ROOT/'products').glob('*.html'))) == 18
 assert not any('type="password"' in p.read_text() or 'stripe.com' in p.read_text() for p in files), 'closed shop must not collect a payment'
-print(f'Checked {len(files)} pages, {links} internal links/assets, labels, image text and GitHub Pages paths.')
+print(f'Checked {len(files)} pages, {links} internal links/assets, labels, image text and configured domain paths.')

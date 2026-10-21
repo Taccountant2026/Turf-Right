@@ -9,3 +9,6 @@
 @media print{.site-header,.launch-bar,.site-footer,.button-row,.toolbar,.toast,.breadcrumb,dialog{display:none!important}.wrap{width:100%}.section{padding:15px 0}.form-layout,.article-layout{display:block}.form-card{display:none}.result-card{background:white;border:0;padding:0}body{background:white;color:black}.checklist li{break-inside:avoid}}
 
 .brand img{width:64px;height:64px;border-radius:50%;object-fit:contain;flex-shrink:0}.site-footer .brand img{width:74px;height:74px}.brand{letter-spacing:-.4px}.brand small{font-size:8px;letter-spacing:.18em}@media(max-width:580px){.brand img{width:51px;height:51px}.brand{font-size:17px}.brand small{font-size:7px;letter-spacing:.1em}}
+
+/* Stone & Sprig identity: original approved artwork, responsive without distortion. */
+.brand img.stone-brand-logo{width:168px;height:112px;border-radius:0;object-fit:contain}.site-footer .brand img.stone-brand-logo{width:210px;height:140px;background:#faf8f1;padding:10px;border-radius:4px}.header-row{min-height:116px}@media(max-width:580px){.brand img.stone-brand-logo{width:129px;height:86px}.header-row{min-height:90px}.site-footer .brand img.stone-brand-logo{width:210px;height:140px}}
