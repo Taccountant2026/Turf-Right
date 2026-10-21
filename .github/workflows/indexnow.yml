@@ -14,8 +14,8 @@ jobs:
       - name: Submit sitemap URLs to IndexNow
         env:
           INDEXNOW_KEY: fca8497ffb03160de5c4fd1e953d9eb4
-          SITEMAP_URL: https://taccountant2026.github.io/Turf-Right/sitemap.xml
-          KEY_LOCATION: https://taccountant2026.github.io/Turf-Right/fca8497ffb03160de5c4fd1e953d9eb4.txt
+          SITEMAP_URL: https://stoneandsprig.co.uk/sitemap.xml
+          KEY_LOCATION: https://stoneandsprig.co.uk/fca8497ffb03160de5c4fd1e953d9eb4.txt
         run: |
           set -euo pipefail
           curl -fsSL --retry 3 "$SITEMAP_URL"             | grep -oP '(?<=<loc>).*?(?=</loc>)'             | while IFS= read -r url; do
