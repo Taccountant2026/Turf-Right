@@ -3,9 +3,12 @@
   "version": "2.0.0",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": ">=22.23.4 <23 || >=24.22.1 <25 || >=26.12.1 <27"
+  },
   "scripts": {
-    "build": "node scripts/build.mjs",
-    "test": "node --test tests/*.test.mjs",
-    "check": "python3 scripts/check-links.py"
+    "build": "node scripts/check-node-version.mjs && node scripts/build.mjs",
+    "test": "node scripts/check-node-version.mjs && node --test tests/*.test.mjs",
+    "check": "node scripts/check-node-version.mjs && python3 scripts/check-links.py"
   }
 }
