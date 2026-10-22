@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "agent": "Sprig",
+  "business": "Stone & Sprig",
+  "enabled": true,
+  "timezone": "Europe/London",
+  "maxSubstantiveUpdatesPerDay": 1
+}
