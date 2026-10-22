@@ -80,7 +80,7 @@ async function sendLead(form,fields){
  const fingerprint=JSON.stringify(payload),last=attempts.get(form),requestKey=last?.fingerprint===fingerprint?last.key:crypto.randomUUID();attempts.set(form,{fingerprint,key:requestKey});
  button.disabled=true;feedback.textContent='Sending your private enquiry…';
  try{
-  const response=await fetch('https://retroreplay.uk/api/leads',{method:'POST',credentials:'omit',headers:{'Content-Type':'application/json'},body:JSON.stringify({...payload,requestKey}),signal:AbortSignal.timeout(15000)});
+  const response=await fetch('https://stone-and-sprig.taccountant.chatgpt.site/api/leads',{method:'POST',credentials:'omit',headers:{'Content-Type':'application/json'},body:JSON.stringify({...payload,requestKey}),signal:AbortSignal.timeout(15000)});
   let out;try{out=await response.json();}catch{throw new Error('The enquiry service could not confirm receipt. Please try again.');}
   if(!response.ok)throw new Error(out.error||'Your enquiry could not be saved. Please try again.');
   if(typeof out.reference!=='string'||!/^[a-f0-9-]{36}$/.test(out.reference))throw new Error('A receipt reference was not returned. Please retry the same enquiry.');
