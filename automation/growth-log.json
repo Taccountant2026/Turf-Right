@@ -24,6 +24,21 @@
         "https://www.rhs.org.uk/soil-composts-mulches/waterlogging-flooding",
         "https://www.rhs.org.uk/lawns/waterlogging"
       ]
+    },
+    {
+      "id": "editorial-2026-10-24",
+      "timestamp": "2026-10-23T23:08:33Z",
+      "londonDay": "2026-10-24",
+      "status": "publication-attempt",
+      "url": "https://stoneandsprig.co.uk/journal/photos-for-a-garden-enquiry.html",
+      "summary": "Five useful views for a clearer garden enquiry; accurate publication date; shop remains closed",
+      "sourceDraftCommit": "565aba06f64be3ebe3ff0fb0c0740b44794662c9",
+      "validation": [
+        "6 static tests, build and 1779 links/assets checked",
+        "Guide date and sitemap corrected to actual publication day",
+        "Checkout and stock confirmation remain disabled",
+        "Node 24.22.1 official SHA256 verified"
+      ]
     }
   ]
 }

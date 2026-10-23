@@ -40,6 +40,44 @@ export const collections = [
 
 export const guides = [
   {
+  "slug": "photos-for-a-garden-enquiry",
+  "title": "Five useful views for a clearer garden enquiry",
+  "category": "Garden projects",
+  "read": "4 min",
+  "intro": "Show the space, the problem and the practical details without sharing more of your home than necessary.",
+  "source": [],
+  "products": [],
+  "sections": [
+    [
+      "1. The space as a whole",
+      "From a safe place you can already reach, take one view that shows the area you want to discuss. Explain which part matters and what you hope to change. You do not need to climb, move heavy objects or go onto slippery ground to get a better photograph."
+    ],
+    [
+      "2. The specific problem",
+      "Add a closer view of the patch, border, surface or awkward corner you mean. Describe what makes it difficult in everyday use. A photograph can start a conversation, but it cannot confirm a diagnosis, the ground conditions or which construction work is suitable."
+    ],
+    [
+      "3. The access route",
+      "If it is safe and relevant, show the route from the normal entrance to the work area, including visible steps or narrow sections. Add approximate measurements you can take comfortably. Keep gates, boundaries and neighbouring property in the correct context rather than implying access that has not been agreed."
+    ],
+    [
+      "4. The nearby surfaces and features",
+      "Show nearby paving, buildings or established planting that affects the brief. Note anything you already know about underground services, but do not dig to find them. If water is involved, describe when it appears and use the wet-garden guide to record observations without choosing a drainage fix."
+    ],
+    [
+      "5. What you want to keep",
+      "Include a view of an existing feature, plant or useful part of the garden that you would like to retain. Separate must-haves from ideas you are still considering. A short note about priorities can be more useful than a large folder of photographs with no explanation."
+    ],
+    [
+      "Share the brief privately",
+      "Check images for faces, children, number plates, house numbers, documents and neighbours' private spaces. Share only what is needed through the project-brief route; do not post a home layout publicly. Location, access, scope, timing and any written quote are reviewed individually. No visit or coverage is promised, and the planned shop is not taking orders."
+    ]
+  ],
+  "published": "2026-10-24",
+  "updated": "24 October 2026",
+  "updatedISO": "2026-10-24"
+},
+  {
     "slug": "wet-garden-before-project",
     "title": "A soggy garden? Make a useful plan before digging.",
     "category": "Garden projects",
