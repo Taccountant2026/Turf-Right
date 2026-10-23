@@ -39,6 +39,48 @@ export const collections = [
 ];
 
 export const guides = [
+  {
+    "slug": "wet-garden-before-project",
+    "title": "A soggy garden? Make a useful plan before digging.",
+    "category": "Garden projects",
+    "read": "4 min",
+    "intro": "Notice where rainwater collects, what stays wet and which questions to ask before changing the garden.",
+    "source": [
+      [
+        "RHS: waterlogging and flooding",
+        "https://www.rhs.org.uk/soil-composts-mulches/waterlogging-flooding"
+      ],
+      [
+        "RHS: waterlogged lawns",
+        "https://www.rhs.org.uk/lawns/waterlogging"
+      ]
+    ],
+    "sections": [
+      [
+        "Map what happens after rain",
+        "From a safe, dry spot, note where puddles form, how long they last and whether the water appears after ordinary rain or only heavy downpours. Record whether the problem affects the lawn, a border, paving or a route to the door. Photos from different days can make the pattern clearer."
+      ],
+      [
+        "Avoid making the soil worse",
+        "Keep off very wet lawns and borders where practical: walking or working on saturated ground can compact it further. Do not start digging drainage trenches or redirecting water towards buildings, neighbours or drains on the strength of a quick online tip."
+      ],
+      [
+        "Separate the symptoms from the proposed fix",
+        "A puddle can have several causes, including compaction, heavy soil, surface runoff or a drainage fault. Record what you observe without assuming a soakaway, new paving or a lawn replacement is the answer. Water from overflowing drains or suspected contaminated flooding needs the appropriate utility or specialist advice."
+      ],
+      [
+        "Prepare a clearer project brief",
+        "Write down the approximate affected area, access, slope, nearby hard surfaces, what you want to keep and the outcome you hope for. Mark anything you know about underground services and boundaries. Stone & Sprig can discuss a potential project only after its location, scope and suitability are reviewed individually; no visit, coverage or result is promised by this guide."
+      ],
+      [
+        "Choose the next step thoughtfully",
+        "Read the RHS guidance for your particular situation. Some gardens benefit from soil care or a different planting approach; others need professional assessment before structural drainage work. Use Stone & Sprig’s project brief to describe the issue privately, not as a public comment. The planned garden shop is not yet taking orders."
+      ]
+    ],
+    "products": [],
+    "updated": "23 October 2026",
+    "updatedISO": "2026-10-23"
+  },
   {slug:'autumn-reset',title:'An autumn reset, without clearing everything',category:'Seasonal notes',read:'3 min',intro:'Start with the paths you use, the lawn beneath your feet and a little space for wildlife.',source:[['RHS: October lawns','https://www.rhs.org.uk/advice/in-month/october/lawns'],['RHS: October flowers','https://www.rhs.org.uk/advice/in-month/october/flowers']],sections:[['Choose one useful job','Clear fallen leaves from the lawn and well-used paths. Work in small sections, with manageable loads rather than an overfilled bag.'],['Leave some life standing','Seed heads and some perennial stems can remain through winter as habitat. A tidy path and a less tidy border can sit happily together.'],['Let conditions decide','Avoid working on a frosty or waterlogged lawn. Check plant-specific advice before cutting back; autumn is not the right pruning season for every plant.']],products:[1,2,4]},
   {slug:'small-space-gardening',title:'A good garden can start with a few pots',category:'Small spaces',read:'3 min',intro:'A doorstep, patio or balcony can become a growing space. Start with the conditions you have.',source:[['RHS: Growing plants in containers','https://www.rhs.org.uk/container-gardening/growing-plants-in-containers']],sections:[['Read your space','Notice sunlight, wind and how easily you can reach water. Check balcony weight limits and permissions before adding heavy containers.'],['Match plant and pot','Choose a container size, drainage and growing medium suited to the plant. Reuse a sound pot where possible; a new pot is only useful if it fits the job.'],['Keep checking','Containers need regular attention to watering, especially in spring and summer. Check moisture rather than following a rigid timetable, and look out for winter waterlogging.']],products:[8,9,16]},
   {slug:'wildlife-friendly-corner',title:'Make room for the small garden visitors',category:'Wildlife',read:'3 min',intro:'A wildlife-friendly corner begins with thoughtful care, rather than a shopping list.',source:[['RHS: Wildlife in gardens','https://www.rhs.org.uk/wildlife/in-gardens'],['RHS: Pots and container habitats','https://www.rhs.org.uk/wildlife/pots-and-container-habitats']],sections:[['Keep some shelter','Leave a quiet area of stems, fallen leaves or suitable plant cover where practical. Think about how a small creature might move through the garden.'],['Grow for more of the year','Choose plants suited to your space that offer flowers, fruit or shelter at different times. Pots can contribute too.'],['Check what you put out','Inspect any netting for loose edges and trapped wildlife. Keep water containers clean and think carefully about their safe position and access.']],products:[]},

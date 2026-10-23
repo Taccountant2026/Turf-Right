@@ -3,6 +3,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlsplit, unquote, urljoin
 import sys, re
+import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parent.parent
 BASE = re.search(r"baseUrl:\s*'([^']+)'", (ROOT/'catalogue.mjs').read_text()).group(1)
@@ -45,7 +46,10 @@ for path, page in pages.items():
         assert target.is_relative_to(ROOT) and target.is_file(), rel+' broken link: '+ref
         if url.fragment and target in pages: assert unquote(url.fragment) in pages[target].ids, rel+' missing anchor: '+ref
         links += 1
-assert len(files) == 43, 'unexpected built page count'
+namespace = {'s': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
+sitemap_urls = {node.text for node in ET.parse(ROOT/'sitemap.xml').findall('s:url/s:loc', namespace)}
+expected_urls = {BASE + ('' if p.name == 'index.html' else p.relative_to(ROOT).as_posix()) for p in files if p.name not in ('404.html', 'checkout.html')}
+assert sitemap_urls == expected_urls, 'sitemap must cover every public page and no missing pages'
 assert len(list((ROOT/'products').glob('*.html'))) == 18
 assert not any('type="password"' in p.read_text() or 'stripe.com' in p.read_text() for p in files), 'closed shop must not collect a payment'
 print(f'Checked {len(files)} pages, {links} internal links/assets, labels, image text and configured domain paths.')

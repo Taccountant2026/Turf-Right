@@ -1,1 +1,29 @@
-{"version":1,"attempts":[]}
+{
+  "version": 1,
+  "attempts": [
+    {
+      "id": "sprig-2026-10-23-wet-garden-before-project",
+      "utcTimestamp": "2026-10-23T07:49:21.144Z",
+      "londonDay": "2026-10-23",
+      "agent": "Sprig",
+      "business": "Stone & Sprig",
+      "kind": "original-garden-guide",
+      "title": "A soggy garden? Make a useful plan before digging.",
+      "intendedPublicUrl": "https://stoneandsprig.co.uk/journal/wet-garden-before-project.html",
+      "status": "validated-awaiting-publication",
+      "summary": "Prepare an original wet-garden planning guide, surface it on the home page and journal, and retain the closed shop. Publication is not claimed by this source entry.",
+      "sourceBaseCommit": "27d84b6b3b0b0435b8789553969c82608538ffd3",
+      "validation": [
+        "6 existing static tests passed",
+        "Build produced 44 pages",
+        "44 pages and 1741 internal links/assets checked",
+        "New guide metadata, date, RHS sources and private project-brief link checked",
+        "Checkout and stock confirmation remain disabled"
+      ],
+      "references": [
+        "https://www.rhs.org.uk/soil-composts-mulches/waterlogging-flooding",
+        "https://www.rhs.org.uk/lawns/waterlogging"
+      ]
+    }
+  ]
+}
